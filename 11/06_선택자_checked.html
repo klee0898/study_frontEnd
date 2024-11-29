@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div label{
+            width: 20px;height: 20px;background: darkgoldenrod;
+        display: inline-block; border-radius: 50%;
+    }
+
+        /* input[id="sports"]:checked ~ div label{
+            background: red;
+        } */
+        input[id=sports]:checked ~ div label[for=sports]{
+            background: red;
+        }
+        input[id=sports]:checked ~ div label[for=music]{
+            background: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <input type="radio" name="hobby" id="sports">
+    <input type="radio" name="hobby" id="music">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem quia ratione fugit rerum vitae inventore
+        magni a perferendis voluptates.
+    </p>
+    <div>
+        <label for="sports"></label>
+        <label for="music"></label>
+        <!-- <label for="sports">s</label> s"선택
+        <label for="music">m</label> -->
+    </div>
+
+</body>
+</html>

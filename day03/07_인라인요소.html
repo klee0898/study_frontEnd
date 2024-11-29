@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{text-decoration: none;
+          border: 1px solid #000;
+          text-align: center;}
+        #a1{ width: 200px;}
+        #a2{padding: 0 30px;} /* 상하:0, 좌우: 30px 적용 */
+        /* display 속성을 inline-block으로 설정
+           inline-block은 inline특성을 갖으면서 block의 특성을 갖는것 */
+        #a3,#a4{display: inline-block; 
+                width: 100px;
+                background-color: #af6969;
+                color: white; 
+                border: none;
+                }
+        /* 마우스가 요소위에 위치할 때 주는 색상변경 스타일 */
+        a:hover,#a3:hover,#a4:hover 
+        {background-color: #5fb385; color: crimson; }
+        
+    </style>
+</head>
+<body>
+    <!-- 인라인 요소는 내용(텍스트)의 크기에 따라 사이즈가 정해짐 -->
+    <a id="a1" href="#">네이버</a>
+    <a id="a2" href="#">구글</a>
+    <hr>
+    <a id="a3" href="#">네이버</a>
+    <a id="a4" href="#">구글</a>
+    <hr>
+    <img src="https://loremflickr.com/100/100?random=2" alt="">
+    <img src="https://loremflickr.com/100/100?random=2" alt="">
+    <hr>
+    <input type="text" placeholder="이름입력">
+    <input type="text" placeholder="나이">
+</body>
+</html>

@@ -1,0 +1,17 @@
+.box{
+    border: 5px solid #000;
+    background-color: yellow;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+}
+
+.box div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 5px solid blue;
+}

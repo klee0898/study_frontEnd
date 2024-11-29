@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #eee;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 600px;
+    text-align: center; 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* position을 이용한 가운데 정렬 */
+/* .container {    
+    width: 600px;
+    text-align: center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);    
+    padding: 20px;
+    border-radius: 5px;
+} */
+
+
+.container h1 {
+    font-size: 46px;
+}
+.container p {    
+    color:#aaa;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+.btns{    
+    margin-bottom: 30px;
+}
+.btns .btn {
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.325);
+    padding: 10px;
+}
+/* 클래스명이 두개인 경우 .btn .win을 이어서 사용하면 구분가능 */
+.btn.win{
+    background-color: #fff;
+    color: #000;
+}
+.btn.apple{
+    background-color: rgb(238, 87, 12);
+    color: #fff;
+}
+
+.links{
+    font-size: 13px;
+}
+
+.links span{
+    color: #bbb;
+    margin: 10px;
+}
+.links a{
+    color: dodgerblue;
+    margin: 10px;
+}
+.links a:hover{
+    text-decoration: underline;
+}

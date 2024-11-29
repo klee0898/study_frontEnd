@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* float 해제 방법
+            #1.overflow: hidden;을 부모요소에 적용해주면 자식요소가 
+               부모를 벗어나지 못하게 만들어줌 
+
+            #2. 가상요소와 clear속성 사용
+                clear속성 : left, right, both, 주로 both 사용 
+            .box::after{
+                content:"";
+                display: block; 
+                clear: both; 
+            }
+        */
+
+        .box {
+            background-color: yellow;
+            border: 1px solid #000;             
+            overflow: hidden;
+        }
+
+        .box div{            
+            float: left;
+            width: 100px; height: 100px; background-color: red;
+            border: 3px solid #000;
+        }
+        /* .box::after{
+            content:"";
+            display: block; */
+
+            /* float을 해제 : 
+            clear속성 : left, right, both, 주로 both 사용 */
+            /* clear: both; 
+        } */
+        
+
+
+
+        .d2{
+            width: 150px;height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div class=".box3"></div>
+     </div>
+
+     <div class="d2"></div>
+</body>
+</html>

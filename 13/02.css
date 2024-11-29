@@ -1,0 +1,25 @@
+
+body{}
+a{color: #333;}
+.container{
+    a.btn1, btn2 
+}
+a.btn{}
+a.btn1{}
+a.btn2{}
+a.btn2::after{}
+a.btn2:hover::after{width: 100%;}
+a.btn3{overflow: hidden;}
+a.btn3::before{left: 100%;}
+a.btn4::before{
+    content:'';
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 4px;
+background-color: red;
+transform: translate(-50%);
+transition: .3s;}
+
+a.btn4::before{width: 100%;}

@@ -1,0 +1,24 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 3px solid tomato;
+    margin: 10px;
+}
+
+.box1{border-radius:20px;}
+.box2{border-radius: 50px;}
+/* 가로 세로 폭 모를 경우 50% 적용시 원을 표현 */
+.box3{border-radius: 50%;}
+/* border-top-left-radius:
+border-top-right-radius:
+border-bottom-left-radius:
+border-bottom-right-radius:
+줄여서 아래와 같이 표현 */
+/* 왼쪽탑 오른쪽탑 오른쪽바텀 왼쪽바텀(시계방향) */
+.box4{border-radius: 50px 0 50px 0;}
+
+.box5{border-radius: 0 100% 0 0;}
+.box6{border-radius: 100% 100% 100% 0;}
+.box7{border-radius: 50% 50% 0 0;}
+.box8{border-radius: 100% 0 100% 0;}

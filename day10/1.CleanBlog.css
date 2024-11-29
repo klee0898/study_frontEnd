@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Merriweather Sans', sans-serif;  
+    color: #333;  
+  }
+
+/* 
+    텍스트 관련 속성들은 부모로부터 상속을 받는데
+    a태그는 예외로 컬러, 스타일 속성은 지정해줘야 한다. 
+*/
+a {
+    text-decoration: none;    
+    font-weight: 700;
+}  
+/*------- header ----------- */
+header{
+    /* border: 2px solid #f60404; */
+    position: absolute;
+    /* absolute: inline-block요소로 변함 
+       따라서, width값을 조정해준다.
+    */
+    width: 100%;
+}
+header .gnb{
+    /* border: 1px solid #000; */
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+header .gnb .logo{
+    color:white;
+}
+header .gnb nav{}
+header .gnb nav a{
+    padding: 5px 10px; 
+    color:white;   
+}
+
+/*------- contents ----------- */
+.container{}
+/* --- hero area---- */
+.container .hero{
+    background-image: url("img/CleanBlog.png");
+    /* 뷰포트 세로폭의 60% */
+    height:60vh; 
+    background-size: cover;
+    background-position: center;
+}
+.container .hero .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    background-color: #0c0c0c4c;
+    /* border: 4px solid #1f08f2; */
+}
+.container .hero .heading p{
+    /* border: 1px solid #000; */
+    text-align: center;
+    color:white;
+}
+.container .hero .heading p span{    
+    display: block;
+    color:white;
+    font-size: 80px;
+    font-weight: 700;
+}
+/* --- content area---- */
+.content{}
+.content .inner{
+    padding-top: 100px;
+    width: 960px;
+    margin: 0 auto;
+}
+.content .inner h2{
+    font-size: 50px;
+}
+.content .inner h2:hover{
+    color: #088cb4;
+}
+.content .inner hr{
+    margin-top: 50px;
+    /*hr은 기본적으로 border값이 존재하기 때문에
+      기본 테두리를 없애주고 아래만 테두리를 적용
+    */
+    border: none;
+    border-bottom: 1px solid #00000043;
+}
+.content .inner span{
+    font-size: 30px;
+    display: block;
+    padding: 10px 0;
+    font-weight: normal;
+}
+.content .inner em{}
+
+.link{
+    width: 960px;
+    margin: auto;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.link:hover{
+    color: #088cb4;
+}
+
+
+
+/*------- footer ----------- */
+footer{
+    margin-top: 80px;
+    border-top: 1px solid #00000050;
+    text-align: center;
+    padding: 20px;
+}

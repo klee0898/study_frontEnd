@@ -1,0 +1,39 @@
+a{
+    text-decoration: none;
+}
+
+.dropdown-menus{
+    /* border: 1px solid #000; */
+    display: flex;
+    width: 600px;
+    margin: auto;
+}
+.dropdown-menus .dropdown{
+    width: 200px;
+}
+/* dropdown 마우스올라갈때 submenu display:block으로 변경 */
+.dropdown-menus .dropdown:hover .submenu{
+    display: block;
+}
+.dropdown-menus .dropdown .btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #4956db;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-menus .dropdown .submenu{
+    border: 1px solid #000;
+    display: none;
+}
+
+.dropdown-menus .dropdown .submenu a{
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-menus .dropdown .submenu a:hover{
+    background-color: #eee;
+}

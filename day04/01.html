@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- #1. 내장방식의 스타일 -->
+    <style>
+        .eco { border: 1px solid #e42821; }
+    </style>
+    <!-- #3. 외부 스타일 -->
+    <!-- 현재폴더 : ./, 부모(이전)폴더 : ../ -->
+    <!-- <link rel="stylesheet" href="./css/01.css"> -->
+     <link rel="stylesheet" href="css/01.css">
+</head>
+<body>
+    <!-- div.eco -->
+     <div class="eco">
+        <!-- div.animal -->
+        <div class="animal">
+            <!-- #2. 인라인 방식의 스타일 -->
+            <div class="orange" style="color: orange;">호랑이</div>
+            <!-- div#lion -->
+            <div id="lion">사자</div>
+            <!-- div>div.orange -->
+            <div>
+                <div class="orange">
+                    아기 코끼리
+                    <!-- span.orange -->
+                     <span class="orange">형코끼리</span>
+                     <span>동생 코끼리</span>
+                </div>
+             </div>
+         </div>
+     </div>
+    
+</body>
+</html>

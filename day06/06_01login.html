@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login{
+            /* background-color: #eee; */
+            border-radius: 5px;
+            box-shadow: 0 0 10px;
+            width: 300px;
+            padding: 30px;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        input{
+            outline: none;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #b8b5b5;
+            box-sizing: border-box;
+        }
+        .btn{
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h2>로그인</h2>
+        <form action="">
+            <input type="text" placeholder="이메일">
+            <br>
+            <input type="password" placeholder="비밀번호">
+            <br>
+            <input class="btn" type="submit" value="로그인">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{margin: 0;padding: 0;}
+
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+
+.container{}
+.container #trigger{
+    display: none;
+}
+.container label{
+    display: block;
+    /* border: 1px solid #f70404; */
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: .3s;
+}
+.container label span{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+    /* 최상위로 설정 */
+    z-index: 99;
+}
+
+/* span:nth-child(1) : 자식요소중에
+   첫번째 자식이 span인 요소를 선택
+*/
+.container label span:nth-child(1){
+    top: 0;
+}
+.container label span:nth-child(2){
+    top: 50%;
+}
+.container label span:nth-child(3){
+    top: 100%;
+}
+
+#trigger:checked + label[for=trigger] span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg); 
+}
+#trigger:checked + label[for=trigger] span:nth-child(2){
+    opacity: 0;
+}
+#trigger:checked + label[for=trigger] span:nth-child(3){
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/* sidebar */
+#trigger:checked ~ .sidebar{
+    left:0;
+}
+
+#trigger:checked + label{
+    left:210px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #e729d780;
+    left: -250px;
+    transition: .3s;
+}
+.sidebar ul{
+    list-style: none;
+    margin-top: 60px;
+
+}
+.sidebar ul li{}
+
+

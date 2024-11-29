@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----- 초기화 ----- */
+
+* { margin: 0; padding: 0; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+a { text-decoration: none; }
+
+/* ----- 헤더 ----- */
+
+header{
+    background-color: rgba(59, 197, 101, 0.432);
+}
+header .gnb{
+    width: 960px;
+    /* border: 3px solid #000; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+header .gnb h1{
+    /* border: 1px solid #000; */
+    color: crimson;
+}
+
+header .gnb nav{
+    /* border: 1px solid #000; */
+}
+header .gnb nav a{
+    padding: 0 20px;
+    line-height: 40px;
+}
+header .gnb nav a:hover{
+    color: crimson;
+}
+
+header .gnb .login{
+    /* border: 1px solid #000; */
+}
+header .gnb .login a{
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    transition: .3s;
+    line-height: 40px;
+
+
+}
+header .gnb .login a:hover{
+    background-color: tomato;
+    transition: .3s;
+}

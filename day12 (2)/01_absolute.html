@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .grandfather{
+            border: 3px solid #f00606;
+            margin: 50px;
+            /* relative : 자신의 원래 위치를 기준으로 위치 조정 */
+            position: relative;
+            left: 100px; 
+        }
+        .parent{
+            border: 3px solid #0f03fa;
+            margin: 50px;
+            /* absolute는 부모를 기준으로 위치 조정 
+               조상 중에 relative, absolute가 있으면 그중 가까운 조상이 부모가 된다. 
+            */
+            position: absolute;
+            left: 200px;
+        }
+        /* absolute를 주면 inline-block으로 변경, 붕떠버림 */
+        .child{
+            border: 3px solid #000;
+            position: absolute;
+            top: 10px;left: 10px; /*top, left, right, bottom : 부모를 기준으로 위치가 조정*/
+        }
+    </style>
+</head>
+<body>
+    <div class="grandfather">
+        <div class="parent">
+            <p class="child">absolute</p>
+        </div>
+    </div>
+</body>
+</html>

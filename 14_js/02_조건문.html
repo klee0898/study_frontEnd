@@ -1,0 +1,32 @@
+<script>
+    window.alert("알림창 띄위기");
+
+    /* 문제> 입력한 id와 비밀번호가 
+DB의 아이디와 비밀번호에 일치하면
+"test님 반갑습니다"를 문서에 출력하시오.
+아이디는 일치하는데 비밀번호가 
+일치하지 않는 경우
+"비밀번호가 일치하지 않습니다"를 
+경고창으로 출력하시오.
+아이디가 일치하지 않는 경우 
+"아이디가 일치하지 않습니다"를 
+경고창으로 출력하시오.
+*/
+const dbId = "test";
+const dbPw = "1234";
+
+// 입력변수
+let uid = prompt("아이디를 입력하세요");
+let pw = prompt("비번을 입력하세요");
+
+// if문안에 if문
+if(dbPw == uid){
+    if(dbPw == pw){
+        document.write(uid + "님 반갑습니다!!");
+    }else{
+        alert("비밀번호가 일치하지 않습니다!! 다시입력하세요")
+        location.reload()
+    }
+}
+
+</script>

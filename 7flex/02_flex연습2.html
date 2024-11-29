@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            background-color: yellowgreen;
+            padding: 10px;
+        }
+        .search{
+            border-radius: 15px 0 0 15px;
+            border: 1px solid #000;
+            padding-left: 10px;
+            height: 20px;
+            margin-right: -8px;
+            vertical-align: top;
+        }
+        .btn{
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #000;
+            background-color: dodgerblue;
+            color: white;
+            width: 70px;
+            height: 22px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div>
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴2</a>
+        </div>
+        <form action="">
+            <input class="search" type="text" placeholder="검색어">
+            <input class="btn" type="submit">
+        </form>
+    </nav>
+</body>
+</html>

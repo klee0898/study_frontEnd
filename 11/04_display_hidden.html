@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{display: none;}
+        /* 존재가 사라짐 */
+        .visibility{visibility: hidden;}
+        /* 박스는 안보이지만 공간은 차지하고 있슴 */
+        .opacity{opacity: 0;}
+        .box{
+            width: 100px;height: 100px;margin: 10px;
+            border: 2px solid #000;
+            background-color: #0280f7;
+        }
+    </style>
+</head>
+<body>
+    <h2><display:none></h2>
+    <div class="box display"></div>
+    <h2>voluptatibus: visibility</h2>
+    <div class="box visibility"></div>
+    <h2>opacity 0</h2>
+    <div class="box opacity"></div>
+    
+</body>
+</html>

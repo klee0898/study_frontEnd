@@ -1,0 +1,45 @@
+.tab-container{
+    border: 5px solid #f60404;
+    width: 600px;
+    height: 350px;
+    position: relative;  
+}
+.tab-container input[name=tmenu]{
+    display: none;
+}
+
+input[id=tab1]:checked ~ .slide1, 
+input[id=tab2]:checked ~ .slide2, 
+input[id=tab3]:checked ~ .slide3 
+{
+    display: block;
+}
+
+
+.tab-container .content{
+    position: absolute;
+    display: none;
+}
+.tab-container .content img{
+    width: 100%;
+}
+.tab-container .btn{
+    border: 1px solid #000;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.tab-container .btn label{
+    display: inline-block;
+    width: 20px;height: 20px;
+    background-color: #544c4c;
+    border-radius: 50%;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1], 
+input[id=tab2]:checked ~ .btn label[for=tab2], 
+input[id=tab3]:checked ~ .btn label[for=tab3] 
+{
+    background-color: dodgerblue;
+}

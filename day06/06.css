@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login{
+    border-radius: 5px;
+    box-shadow: 0 0 10px #888;
+    width: 300px;
+    padding: 30px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+    }
+form{
+    /* border: 1px solid #000; */
+}
+
+/* input : inline-block 특성을 갖고 있음
+    사이즈 조정이 가능하다. */
+    
+input{
+    outline: none;
+    /* % : 부모크기 기준으로 적용 */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #cac4c4;
+    /* box의 사이즈 고정할 때 사용하는 속성 */
+    box-sizing: border-box;
+}
+.btn_login{
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+}

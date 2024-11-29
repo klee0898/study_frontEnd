@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        position : 요소의 위치 지정 속성
+
+        # 속성값
+        static : 기본값
+        relative : 원래잇던 자신의 위치를 기준으로 배치
+        absolute : 부모요소를 기준으로 배치
+            ** 여기서 부모요소란
+                html 구조에서 조상(부모, 할아버지,..)중에 absolute나 relative 값이 있는 조상이 부모가 된다.
+                그 중에 가까운 조상이 부모가 된다.
+
+                조상 중에 absolute나 relative가 없으면 뷰포트가 부모가 된다.
+
+        fixed   : 무조건 뷰포트를 기준으로 배치 
+     -->
+        <style>
+            .grandfa{
+                /* margin: 50px; */
+                margin: 50px dashed black;
+                /* width: 500px;
+                height: 300px;
+                border: 5px dashed #000;*/
+                position: relative; 
+            }
+            .parent{
+                /* margin: 50px; */
+                /* background-color: tomato; */
+                width: 400px;height: 200px;
+                border: 10px solid #000;
+                position: absolute;
+                top: 100px;left: 100px;
+            }
+            .child1{
+                font-size: 40px;
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                /* absolute, fixed를 주면 float (붕 뜨는) 현상 */
+                /* position: fixed;
+                top: 20px;
+                left: 20px; */
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                /* position: relative;
+                top: 50px;
+                left: 50px; */
+            }
+            .child2{
+                font-size: 40px;
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                /* position: fixed;
+                top: 200px;
+                left: 200px; */
+
+            }
+            .child3{
+                font-size: 40px;
+                background-color: yellowgreen;
+                width: 100px;
+                height: 100px;
+                /* position: absolute;
+                top: 150px;
+                left: 150px; */
+            }
+        </style>
+</head>
+<body>
+    <div class="grandfa">
+        <div class="parent">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+        </div>
+    </div>
+</body>
+</html>

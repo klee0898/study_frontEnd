@@ -1,0 +1,61 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*{
+    /* margin: 0;padding: 0; */
+    box-sizing: border-box;
+}
+/* 
+배경컬러
+#DCE35B
+#45B649
+*/
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(90deg, yellow, greenyellow); */
+    /* background: linear-gradient(90deg, #DCE35B, #45B649); */
+    background: linear-gradient(90deg, #0657d0, #99209b );
+    
+}
+
+a{
+    text-decoration: none;
+    color:#222;
+}
+.gnb {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(230, 230, 230, 0.401);
+    padding-bottom: 10px;
+  } 
+  .gnb a{
+    /* text-align: none; */
+    /* color: #333; */
+    /* border: 1px solid #000; */
+    width: 80px;height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .gnb a::before, .gnb a::after{
+    position: absolute;
+    content: attr(data-link);
+    width: 100%;transform: 0.3s;
+  }
+  .gnb a ::before{top: 0;left: 0;}
+  .bng a::after{
+    top: 100%;left: 0;color: yellowgreen;
+  }
+  .gnb a:hover::before{top: -100%;
+  }
+  .gnb a:hover::after{top: 0;
+    
+  }
+  

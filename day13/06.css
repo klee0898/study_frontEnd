@@ -1,0 +1,64 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+/* 
+배경컬러
+#DCE35B
+#45B649
+*/
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* 각도의 단위 : deg */
+    background:linear-gradient(-90deg, #DCE35B,#45B649)
+}
+
+a{
+    text-decoration: none;
+    color:#222;
+}
+
+.gnb {}
+.gnb a {
+  display: block;
+  /* border: 1px solid #000; */
+  width: 300px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gnb a::before, .gnb a::after{
+  content: attr(data-txt);
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 40px;  
+  color: white;
+  transition: .3s;
+}
+.gnb a::before{  
+  background-color: crimson;  
+  top: 0;
+}
+.gnb a::after{  
+  background-color: royalblue;  
+  top: 100%;
+}
+.gnb a:hover::before{
+  top: -100%;
+}  
+.gnb a:hover::after{
+  top: 0;
+}  
+
+
+

@@ -1,0 +1,132 @@
+/* 모든 요소 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #eee;
+}
+
+.wrapper{
+    width: 1024px;
+    /* height: 400px; */
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0 0 20px #888;
+    border-radius: 5px;
+}
+ul{list-style: none;}
+a{ 
+    text-decoration: none;
+    color: black;
+}
+/* ------ header ------- */
+header{
+    /* border: 3px solid red; */
+    margin-bottom: 30px;
+}
+header h1{
+    /* border: 1px solid #000; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+}
+nav .gnb{
+    display: flex;
+}
+nav .gnb a{
+    display: block;
+    width: 100px;
+    /* background-color: greenyellow; */
+    text-align: center;
+    padding: 10px;
+}
+nav .gnb a:hover{
+    background-color: crimson;
+    color: white;
+}
+
+nav .search{
+    margin-top: 7px;
+}
+nav .search .keyword{
+    outline: none;
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid #aaa;
+    border-radius: 15px 0 0 15px;
+    margin-right: -7px;
+    vertical-align: top;
+
+}
+/* input : inline-block 특성을 갖는다.
+    따라서, 사이즈 (width, height) 조정 가능함
+    */
+nav .search .btn{
+    width: 60px;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 0 15px 15px 0;
+    height: 27px;
+
+}
+
+/* ----- contents ------ */
+.contents{
+    /* border: 3px solid blue; */
+    display: flex;
+    margin-bottom: 30px;
+}
+aside{
+    flex: 1;
+    /* background-color: yellow; */
+    padding-left: 10px;
+}
+aside h3{}
+aside ul{
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+section{
+    flex: 3;
+}
+section div{
+    /* border: 1px solid #000; */
+    margin-bottom: 30px;
+}
+section div h2{
+    margin-bottom: 20px;
+}
+section div span{}
+section div img{}
+section div p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* 속성값을 모를 경우 
+    ctrl + space bar 눌러서 참조한다. */
+    text-align: justify;
+}
+section div .gotoTop{
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ------ footer ------- */
+footer{}
+footer p{
+    text-align: right;
+}

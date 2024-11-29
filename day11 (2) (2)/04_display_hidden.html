@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            /* 존재가 사라짐 */
+            display: none;
+        }
+        .visibility{
+            /* 박스는 안보이지만 공간은 차지*/
+            visibility: hidden;
+        }
+
+        .opacity{
+            /* 불투명도 : 0(투명) ~ 1(불투명) 
+                공간을 차지
+            */
+            opacity: 0;
+        }
+        /*
+        opacity와 hidden의 차이점
+        opacity : 클릭시 클릭인식을 함(상호작용가능)
+        hidden : 클릭시 클릭인식 안됨(사용자와 상호작용불가)
+        */
+
+        .box{
+            width: 100px;height: 100px;margin: 10px;
+            border: 2px solid #000;
+            background-color: #7e88e2;
+        }
+    </style>
+</head>
+<body>
+    <h2>display:none</h2>
+    <div class="box display"></div>
+    <h2>visibility: hidden</h2>
+    <div class="box visibility"></div>
+    <h2>opacity: 0</h2>
+    <div class="box opacity"></div>
+    asdlfkjsa;ldfj
+</body>
+</html>

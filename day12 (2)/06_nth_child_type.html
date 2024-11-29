@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p:nth-child(2){
+            color:red;
+        } */
+
+        /* p:nth-of-type(1){
+            color: red;
+        } */
+         p:first-child{
+            color: red;
+         }
+
+         p:last-child{
+            color: blue;
+         }
+    </style>
+</head>
+<body>
+    <!-- 가상클래스
+        <요소>:<가상클래스>(조건)  
+        p: 모든 <p> 요소를 선택.
+        p:first-child : 부모 요소의 첫 번째 자식이면서 <p>인 요소를 선택.
+        p:last-child :  부모 요소의 마지막 자식이면서 <p>인 요소를 선택.   
+        p:nth-child(2): 부모의 모든 자식 요소 중 두 번째 자식이면서 <p>인 요소를 선택.
+        p:nth-of-type(2): 부모의 자식 요소 중 모든 <p> 중 두 번째 <p> 요소를 선택.
+    -->
+    <div>
+        <!-- <span>asdf</span>
+        <span>asdf</span> -->
+        <p>첫 번째</p>
+        <p>두 번째</p>
+        <span>세 번째</span>
+        <p>네 번째</p>
+        <span>asdf</span>
+      </div>       
+</body>
+</html>

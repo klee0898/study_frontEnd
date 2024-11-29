@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----- 초기화 ----- */
+
+* { margin: 0; padding: 0; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+a { text-decoration: none; }
+
+/* ----- 헤더 ----- */
+
+header{
+    /* background-color: rgba(59, 197, 101, 0.432); */
+}
+header .gnb{
+    width: 960px;
+    /* border: 3px solid #000; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+header .gnb h1{
+    /* border: 1px solid #000; */
+    color: crimson;
+}
+
+header .gnb nav{
+    /* border: 1px solid #000; */
+}
+header .gnb nav a{
+    padding: 0 20px;
+    line-height: 40px;
+}
+header .gnb nav a:hover{
+    color: crimson;
+}
+
+header .gnb .login{
+    /* border: 1px solid #000; */
+}
+header .gnb .login a{
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    transition: .3s;
+    line-height: 40px;
+
+
+}
+header .gnb .login a:hover{
+    background-color: tomato;
+}
+
+/* 컨텐츠 */
+
+.contents{}
+.contents .hero{
+    height: 40vh;
+    background-image: url("img/bg.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* text 관련 속성(폰트체, 글자크기, 두께..)들은 상속된다 */
+.contents .hero .heading{
+    width: 60%;
+    text-align: center;
+}
+.contents .hero .heading h1{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.contents .hero .heading h1 span{
+    color: blue;
+    /* font-weight: 500; */
+}
+.contents .hero .heading p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #464444;
+}
+/* 컨텐트 */
+
+.content{
+    padding: 50px 0;
+}
+.content .inner{
+    /* border: 1px solid #000; */
+    width: 960px;
+    display: flex;
+    margin: auto;
+}
+.content .inner div{
+    padding: 0 10px;
+    flex: 1;
+}
+.content .inner div h2{
+    /* border: 1px solid #000; */
+    color: rgba(0, 0, 0, 0.774);
+    margin-bottom: 10px;
+}
+.content .inner div p{
+    color: rgba(0, 0, 0, 0.568);
+    text-align: justify
+}
+
+/* 푸터 */
+
+footer{
+    margin-top: 30px;
+    border-top: 1px solid #00000093;
+    padding: 20px;
+    text-align: center;
+}

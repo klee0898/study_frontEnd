@@ -1,0 +1,50 @@
+*{
+    margin: 0;padding: 0;
+}
+a{text-decoration: none;}
+
+text{scroll-behavior: smooth;}
+
+body{
+    background-color: #eee;
+    padding: 40px;
+}
+.container{
+    width: 960px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 6px black;
+
+}
+.container header{
+    margin-bottom: 30px;
+}
+.container header a{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    transition: .5s;
+}
+.container header a:hover{
+    background-color: green;
+}
+
+/* 본문 */
+.container section{
+    margin-top: 20px;
+}
+.container section h1{
+    margin-bottom: 20px;
+}
+.container section p{
+    margin: 20px 0;
+    line-height: 1.5;
+}
+.container section a{
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}

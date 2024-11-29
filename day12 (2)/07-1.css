@@ -1,0 +1,62 @@
+/* Fontawesome 4.7 */
+/* @import css파일에서 다른 css파일을 불러올 때 사용 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.info{}
+.info .item{
+    /* border: 1px solid #ee0707; */
+    margin-bottom: 10px;
+    width: 300px;
+    position: relative;
+}
+.info .item input{
+    /* inherit 부모크기로 상속 */
+    /* width: 100%; */
+    width: inherit;
+    padding: 10px;
+    outline: none;
+    padding-left: 50px;
+    border-radius: 5px;
+    border: 1px solid #0000005f;
+    transition: .3s;
+}
+.info .item input:focus{
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+
+.info .item input:focus + .fa{
+    /* color: dodgerblue; */
+    background-color: dodgerblue;
+}
+
+.info .item .fa{
+    /* border: 1px solid #064fee; */
+    position: absolute;
+    top: 0;left: 0;
+    font-size: 20px;
+    width: 40px;
+    height: 37px;
+    text-align: center;
+    line-height: 37px;
+    color: #fff;
+    background-color: #a29f9f;
+    border-radius: 5px 0 0 5px;
+    transition: .3s;
+}
+
+.info .item input:focus::placeholder{
+    visibility: hidden;
+}

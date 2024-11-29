@@ -1,0 +1,27 @@
+body{
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: yellowgreen;
+    padding: 0 150px;
+    
+}
+.container h1{
+    font-size: 40px;
+    color: red;
+}
+.container a{
+    color: blue;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+input{
+    border: none;
+    background-color: rgb(20, 107, 194);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 15px;
+}

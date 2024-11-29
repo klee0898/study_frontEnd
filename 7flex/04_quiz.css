@@ -1,0 +1,72 @@
+/* 모든 요소 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eee;
+}
+
+.wrapper{
+    width: 1024px;
+    /* height: 400px; */
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0 0 20px #888;
+    border-radius: 5px;
+}
+ul{list-style: none;}
+a{ 
+    text-decoration: none;
+    color: black;
+}
+/* ------ header ------- */
+header{
+    border: 3px solid red;
+    margin-bottom: 30px;
+}
+header h1{
+    /* border: 1px solid #000; */
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+}
+nav .menu{}
+nav .menu a{
+    display: inline-block;
+    width: 100px;
+    background-color: greenyellow;
+    text-align: center;
+}
+nav .menu a:hover{
+    background-color: crimson;
+    color: white;
+}
+
+nav .search{}
+nav .search .keyword{}
+nav .search .btn{}
+
+/* ----- contents ------ */
+.contents{
+    border: 3px solid blue;
+    display: flex;
+    margin-bottom: 30px;
+}
+aside{
+    flex: 1;
+}
+section{
+    flex: 3;
+}
+/* ------ footer ------- */
+footer{}
+footer p{
+    text-align: right;
+}

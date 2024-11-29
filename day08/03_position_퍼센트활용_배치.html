@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            .parent{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: tomato;
+                width: 300px;
+                height: 300px;
+                border: 10px solid #000;
+            }
+            .child1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 0%;
+                left: 100%;
+            }
+            .child2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 100%;
+                left: 0%;
+            }
+            .child3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                background-color: yellowgreen;
+                width: 100px;
+                height: 100px;          
+                position: absolute;
+                top: 100%;
+                left: 100%;
+            }
+            .child4{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                background-color: yellowgreen;
+                width: 100px;
+                height: 100px;          
+                position: absolute;
+                /* top, bottom, left, right 기준활용 */
+                top: 0%;
+                right: 100%;
+            }
+        </style>
+</head>
+<body>    
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+        <div class="child4">4</div>
+    </div>    
+</body>
+</html>

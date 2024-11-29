@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    /* padding 속성 값이 두개인 경우 : 상하 안쪽여백, 좌우 안쪽여백*/
+    padding:40px 0; 
+}
+.container {
+    width: 960px;
+    margin:auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.333);
+    padding:40px;
+}
+.container header {
+    margin-bottom: 30px;
+}
+header a{
+    background-color: tomato;
+    color: white;
+    padding:10px 20px;
+    transition: .3s;
+}
+header a:hover{
+    background-color: rgb(13, 139, 4);
+}
+section {
+    margin-top: 60px;
+}
+section h1 {
+    margin-bottom: 20px;
+}
+section p {
+    /*폰트사이즈 기본값: 14px, 1.5배 */
+    /* font-size: 1.5em; */
+    font-size: 20px;
+    /* 줄 간격 1.5배*/
+    line-height: 1.5;    
+    margin-bottom: 20px;
+}
+section .gotoTop {
+    background-color: dodgerblue;
+    color: white;
+    padding:5px 10px;
+    border-radius: 10px;
+}

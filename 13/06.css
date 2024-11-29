@@ -1,0 +1,67 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*{
+    /* margin: 0;padding: 0; */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(90deg, yellow, greenyellow); */
+    background: linear-gradient(90deg, #DCE35B, #45B649);
+    /* * background: linear-gradient(90deg, #0657d0, #99209b); */ */
+    /* background: linear-gradient(90deg, #0a66c2, #99209b); */
+    
+}
+
+a{
+    text-decoration: none;
+    color:#222;
+}
+.gnb{}
+.gnb a{
+  display: block;
+  border: 1px solid #000;
+  width: 300px;height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.gnb a:before , .gnb a::after{
+  content: attr(data-txt);
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 40;
+  color: white;
+}
+.gnb a:before{
+  background-color: #99209b;
+  top:0;
+
+}
+
+.gnb a::after{
+  content: attr(data-txt);
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 40;
+  color: white;
+  transition: .3s;
+ 
+}
+.gnb a:after{
+  content: attr(data-txt);
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 40;
+}

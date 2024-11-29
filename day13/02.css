@@ -1,0 +1,120 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+.container{}
+a.btn1, a.btn2, a.btn3, a.btn4, a.btn5{
+    display: block;
+    font-size: 40px;
+    padding-bottom: 10px;
+    /* border: 1px solid #000; */
+    margin-bottom: 30px;
+    position: relative;
+}
+a.btn1::before{
+    content:'';
+    width: 0;
+    position: absolute;
+    bottom:0;  
+    left: 0;  
+    height: 2px;    
+    background-color: crimson;
+    transition: .3s;
+}
+a.btn1:hover::before{
+    width: 100%;
+}
+
+/* ------- a.btn2 -------- */
+/* 가상요소에 position:absolute가 적용되면
+    before, after의 의미가 사라짐
+*/
+a.btn2::after{
+    content:'';
+    width: 0;
+    position: absolute;
+    bottom:0;  
+    right: 0;  
+    height: 2px;    
+    background-color: crimson;
+    transition: .3s;
+}
+a.btn2:hover::after{
+    width: 100%;
+}
+/* ------- a.btn3 -------- */
+a.btn3{
+    /* overflow: hidden; */
+}
+a.btn3::before{
+    content:'';
+    width: 10px;
+    position: absolute;
+    bottom:0;  
+    left: -10px;  
+    height: 4px;    
+    background-color: crimson;
+    transition: .3s;
+}
+a.btn3:hover::before{
+    left: 100%;
+}
+/* ------- a.btn4 -------- */
+a.btn4{
+    /* overflow: hidden; */
+}
+a.btn4::before{
+    content:'';
+    width: 0px;
+    position: absolute;
+    bottom:0;  
+    left: 50%;  
+    height: 4px;    
+    background-color: crimson;
+    /* 자기자신의 사이즈(width)를 기준으로
+       x축 50% 왼쪽으로 이동
+    */
+    transform: translateX(-50%);
+    transition: .3s;
+}
+a.btn4:hover::before{
+    width: 100%;
+}
+/* ------- a.btn5 -------- */
+a.btn5{
+    /* overflow: hidden; */
+}
+a.btn5::before{
+    content:'';
+    width: 100%;
+    position: absolute;
+    bottom:0;  
+    left: 50%;  
+    height: 4px;    
+    background-color: crimson;
+    /* 자기자신의 사이즈(width)를 기준으로
+       x축 50% 왼쪽으로 이동
+    */
+    transform: translateX(-50%);
+    transition: .3s;
+}
+a.btn5:hover::before{
+    width: 0;
+}

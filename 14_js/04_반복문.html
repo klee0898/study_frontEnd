@@ -1,0 +1,47 @@
+<script>
+    for(var i=0; i<10; i++)
+    document.write(i+1 + "<br>");
+
+document.write("1~10까지의 합 : " + total);
+
+
+let total = 0; // total 변수 초기화
+for (let i = 1; i <= 10; i++) {
+  total += i; // total에 i를 더함
+}
+
+// document.write("1~10까지의 합 : " + total);
+
+let numbers = [11,32,2,33,1];
+console.log(numbers[0]);
+console.log(numbers[1]);
+console.log(numbers[2]);
+console.log(numbers[3]);
+let. len = numbers.length;
+console.log("len = " + len);   //len= 5
+console.log("=====");
+
+for(let idx in numbers){
+    console.log("idx = " + idx);
+    console.log(numbers [idx]);
+}
+
+console.log("==================");
+for(let val of numbers)
+    console.log("val = " + val);
+
+
+console.log("=============")
+    let car = {
+        brand:"현대",
+        price:"2000",
+        color:"red",
+        type:"sedan"
+    }
+
+    for(let key in car){
+        console.log("key = "+ key +" , " ++car[key] );
+        console.log(car[key]);
+    }
+
+</script>

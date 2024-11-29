@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin: 0; padding: 0;
+    text-decoration: none;
+}
+body{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+header{
+    font-family: "Merriweather", serif;
+    /* border: 1px solid #000; */
+    width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    /* border: 1px solid #000; */
+}
+header h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 46px;
+
+}
+header p{
+    text-align: center;
+    color: rgb(165, 161, 160);
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+header .container{
+    text-align: center;
+    margin-bottom: 30px;
+}
+header .container a{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 8px 50px;
+   box-shadow: 0 3px 0 rgba(204, 202, 201, 0.397);
+
+}
+header .container .btn{
+    background-color: rgb(243, 116, 11);
+    color: white;
+}
+header .a{
+    text-align: center;
+    font-size: 13px;
+}
+header .a span{
+    color: #7c7878;
+    margin: 10px;
+}
+header .a a{
+    color: dodgerblue;
+    margin: 10px;
+}
+header .a a:hover {
+    /* color: rgb(204, 199, 197); */
+    text-decoration: underline;
+}

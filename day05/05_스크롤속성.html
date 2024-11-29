@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ddd;
+        }
+        div{
+            background-color: white;
+            width: 400px;
+            height: 600px;
+            border: 2px solid #000;
+            box-shadow: 0 5px 10px #777;
+        }
+        .main{
+            width: 400px;
+        
+            border: 2px solid #fc0303;
+            /* 블럭요소를 가운데 정렬할 때 사용
+               자기 자신을 가운데로 */
+            margin: auto; /* margin: 0 auto와 같다. */
+        }
+        html{
+            /* 부드럽게 자동 스크롤 효과 */
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- 문제> 맨위로 올라가는 버튼을 추가하시오. -->
+    <div class="main">
+        <a href="#d1">메뉴1</a>
+        <a href="#d2">메뉴2</a>
+        <a href="#d3">메뉴3</a>
+        <!-- div#d1 -->
+        <div id="d1">1</div>
+        <div id="d2">2</div>
+        <div id="d3">3</div>
+        <a href="#">맨위로</a>
+    </div>
+</body>
+</html>

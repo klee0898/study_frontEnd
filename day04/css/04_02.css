@@ -1,0 +1,18 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+
+/* 헤드 */
+.logo{margin: 20px;padding: 10px;}
+.navi{background-color: rgb(26, 215, 221); color: white;
+     height: 40px;  }
+.navi>li{display: inline-block; width: 100px; line-height: 40px;
+        text-align: center; }
+/* 컨텐츠 */
+.container{display: flex;}
+section{margin: 30px; width: 60%;
+        border-right: 1px solid #1577f8;}
+.aside{margin: 30px; width: 40%;}
+
+hr{border: 1px solid #1f9fda;}
+/* 푸터 */
+footer{text-align: center;}

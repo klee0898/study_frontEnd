@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 960px;
+    margin: auto;
+    /* 블록요소 가운데 정렬 : margin : auto;
+       인라인 요소 가운데 정렬 : text-align : center;
+       (인라인은 부모에 정렬하면 자식이 적용됨 */
+}
+
+/* ----- header ----- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: yellowgreen;
+    padding: 10px 20px;
+
+}
+
+.keyword{
+    outline: none;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid blue;
+    padding-left: 10px;
+    height: 22px;
+    margin-right: -8px;
+    vertical-align: top;
+}
+.btn{
+    border-radius: 0 15px 15px 0;
+    border: 1px solid blue;
+    background-color: dodgerblue;
+    width: 70px;
+    color: white;
+    height: 24px;
+}
+/* ------ contents ----- */
+.contents{
+    display: flex;
+}
+aside{
+    background-color: yellow;
+    padding: 30px;
+    /* width: 300px; */
+    /* 화면분할 : 비율 1 */
+    flex: 1;
+    /* cakc사용시 주의점 연산자(=,-,*,/)좌우를 공백으로 */
+    height: calc(100vh - 124px);
+   
+}
+aside ul{}
+section{
+    background-color: aqua;
+    padding: 30px;
+    /* 화면분할 : 비율 3 */
+    flex: 2;
+}
+section h2{}
+section p{}
+
+
+/* ------ footer ----- */
+footer{
+    background-color: tomato;
+    text-align: center;
+    padding: 30px;
+    font-size: 12px;
+}
+footer p{}

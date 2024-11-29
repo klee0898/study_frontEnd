@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            /* display: flex; */
+            position: absolute;
+            width: 100px;
+        }
+        /* 인라인 요소에 flex 적용되면 block 속성을 갖게 된다. */
+        /* 블록요소에 
+            absolute 속성이 적용되면 
+            inline-block 속성을 갖게 된다. 
+        */
+        .d2{display: flex;}
+        .d3{position: absolute;
+            border: 3px solid #07ff13;
+            /* z-index: 100; */
+        }
+            
+        .d4{
+            background-color: yellow;
+            position: absolute;
+            width: 100px;
+        }
+
+        span{
+            width: 200px; height: 100px;
+            background-color: tomato;
+            margin: 50px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>INLINE</span>
+    </div>
+    <div class="d2">
+        <span>INLINE</span>
+    </div>
+    <div class="d3">
+        <span>INLINE</span>
+    </div>
+    <br><br>
+    <div class="d4">
+        <span>INLINE</span>
+    </div>
+</body>
+</html>

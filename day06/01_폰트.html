@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            font-size: 20px;
+            /* 줄간격 */
+            line-height: 1.4;
+            /* 문자와 문자사이 간격 */
+            letter-spacing: -.5px;
+            /* 워드(단어)사이의 간격 */
+            word-spacing: 10px;
+            text-decoration: underline;
+            /* 폰트굵기 설정 : 100 ~ 900 */
+            font-weight: 600;
+            font-weight: bold;
+        }
+        /* 폰트체 설정 */
+        
+        /* 바탕체 계열 */
+        .serif{
+            font-family: serif; 
+        }
+        /* 고딕체계열 */
+        .san-serif{
+            font-family: sans-serif;
+        }
+        /* 문자의 가로폭이 동일한 서체 */
+        .monospace{
+            font-family: monospace;
+        }
+
+        /* 흘림체 계열 */
+        .cursive{
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <!-- ctrl+z : undo, ctrl+y: redo -->
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, iure maxime exercitationem odit sint harum quisquam cum iusto numquam molestias?
+    </div>
+    <!-- 다중행 편집 단축키 : 
+     1. ctrl + alt + 방향키 위아래
+     2. alt + 원하는 곳에 마우스 클릭 
+        esc 편집 빠져나오기 -->
+    <hr>
+    <div class="serif">hello world!!</div>
+    <div class="san-serif">hello world!!</div>
+    <div class="monospace">hello world!!</div>
+    <div class="cursive">hello world!!</div>
+</body>
+</html>
