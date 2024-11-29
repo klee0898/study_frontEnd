@@ -1,0 +1,40 @@
+<script>
+    // 페이지 이동
+    // location.href="http://www.naver.com";
+
+    // 페이지 전환 : redirect
+    // location.replace("http://www.daum.net");
+
+    // 문제> '네이버', '구글', '다음' 중 원하는 사이트를 
+    // 입력받아서 해당 사이트로 이동하는 코드를 작성하세요.
+    // 단, 위의 세개의 사이트 이외에 값이면 "없는 사이트입니다" 
+    // 경고창(alert)을 띄우기
+    // switch문 사용
+    
+    let siteName = prompt('네이버, 구글, 다음 중 원하는 사이트를 입력하세요');
+
+    // switch(siteName)
+    // {
+    //     case '네이버':
+    //         location.href="http://www.naver.com"; break;
+    //     case '구글':
+    //         location.href="http://www.google.com"; break;
+    //     case '다음':
+    //         location.href="http://www.daum.net"; break;
+    //     default:
+    //         alert("없는 사이트입니다.");
+    // }
+
+    // if ~ else if문으로 변경하기
+    if(siteName === "네이버"){
+        location.href = "http://www.naver.com";
+    }else if(siteName === "구글"){
+        location.href = "http://www.google.com";
+    }else if(siteName === "다음"){
+        location.href = "http://www.daum.net";
+    }else{
+        alert("없는 사이트 입니다!!")
+    }
+
+
+</script>

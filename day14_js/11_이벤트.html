@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <!-- <textarea id="ta" rows="5" cols="20" onkeypress="onPress()">1234abcde</textarea> -->
+
+    <!-- onkeypress="onPress(this)"
+        : 키보드가 눌렸을 때 onPress함수를 호출한다. 
+        : onPress함수 호출시 자신(this)을 매개변수로 넘겨줌
+    -->
+    <textarea id="ta" maxlength="50" rows="5" cols="20" onkeypress="onPress(this)"></textarea>
+    <br>
+    입력가능 글자수 : <span id="txtCnt">50</span><br>
+    <input type="text" id="name" value="이름을 입력하세요"><br><br>
+    <script>
+        // textarea에 입력된 글자수 알아오기
+        // #1. textarea요소를 찾기
+        // let ta = document.getElementById("ta");
+        // alert(ta.value.length);
+        // #2. onPress() 호출
+        function onPress(obj){
+            // 입력된 글자수 얻어오기
+            var len = obj.value.length; 
+            console.log(len);
+            // 입력가능한 글자수
+            let remain = 50 - (len+1);
+            console.log(remain); 
+            // span 태그를 선택해서 내용(50)을 remain으로 바꿔줌
+            document.getElementById("txtCnt").innerHTML=remain;
+        }
+
+        // ********* addEventListener(이벤트, 함수) *************        
+        // 자바스크립트는 함수를 매개변수로 사용 가능
+        // 일반함수 : function 함수명() {}
+        // 익명함수(=이름없는 함수) : function(){}
+
+        let elem = document.getElementById("name");
+
+        // elem에 focus이벤트가 발생하면, 두번째 매개변수인 함수를 수행
+        elem.addEventListener('focus', function(){
+            if(elem.value == "이름을 입력하세요"){
+                elem.value="";
+            }
+        });
+        // 코드작성시 아래와같이 작성후 함수블럭{} 내부를 채운다.
+        // elem.addEventListener('clik',function(){});
+
+        elem.addEventListener('blur', function(){
+            if(elem.value == ""){
+                elem.value="이름을 입력하세요";
+            }
+        });
+    </script>
+
+</body>
+</html>

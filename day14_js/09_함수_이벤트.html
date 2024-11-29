@@ -1,0 +1,46 @@
+<!-- 이벤트(event) : 웹페이지에서 발생하는 사건(동작) 
+ 마우스 클릭: click, 키입력: keydown, keyup 
+ 이동 : mousemove, mouseover, mouseout
+ 폼동작 : submit, focus
+ 윈도우이벤트 : 스크롤, load
+
+  ~~
+
+-->
+<!-- onclick="f()" 
+ : 해당 요소에 클릭이벤트가 발생했을 때 f()함수 호출
+-->
+<button id="btn1" onclick="f()">tomato</button>
+<button id="btn2" onclick="f2()">royalblue</button>
+<script>
+    function f(){
+        // alert("호출했어?");
+        document.getElementById("btn1").style.backgroundColor="tomato";
+    }
+    
+    function f2(){
+        // document.getElementById("btn2")
+        // : 아이디 속성값이 btn2인 요소를 가져오는 명령
+        let btn2 = document.getElementById("btn2");
+        console.log(btn2);
+        btn2.style.backgroundColor="royalblue";
+    }
+    function ff(){
+        document.querySelector("#targetBtn").style.background="tomato";
+    }
+    function ff2(){
+        document.querySelector("#targetBtn").style.background="";
+    }
+    function ff3(){
+        document.querySelector(".targetInput").style.background="tomato";
+    }
+    function ff4(){
+        document.querySelector(".targetInput").style.background="";
+    }
+</script>
+<button id="targetBtn" onmouseover="ff()" onmouseout="ff2()">버튼</button>
+<!-- onfocus : 포커스주어졌을 때, onblur : 포커스를 잃었을 때 -->
+<input type="text" onfocus="ff3()" onblur="ff4()" class="targetInput">
+
+
+

@@ -1,0 +1,36 @@
+<script>
+    // function f(){
+    //     var ip = document.getElementById("target");
+    //     ip.style.background = "yellow";
+    // }
+
+    function f(target){
+        // console.log(target);
+        target.style.background = "yellow";
+    }
+    function f2(target){
+        // console.log(target);
+        target.style.background = "";
+    }
+</script>
+<!-- this : 해당 이벤트의 대상 요소 -->
+<input id="target" type="text" onfocus="f(this)" onblur="f2(this)">
+
+<!-- 문제 
+  버튼 클릭시 해당 버튼의 값으로 배경색을 바꾸는 스크립트 작성하기
+  함수명 : changeColor
+  <input type="button" value="tomato" >
+  <input type="button" value="skyblue" >
+  <input type="button" value="yellow" >
+  <input type="button" value="red" > 
+  -->
+  <input type="button" value="tomato" onclick="changeColor(this)">
+  <input type="button" value="skyblue" onclick="changeColor(this)">
+  <input type="button" value="yellow" onclick="changeColor(this)">
+  <input type="button" value="red" onclick="changeColor(this)"> 
+
+<script>
+    function changeColor(obj){
+        obj.style.background=obj.value;
+    }
+</script>

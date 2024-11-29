@@ -1,0 +1,42 @@
+<script>
+    // while
+    // while(조건){}
+    let n = 1;
+    let sum = 0;
+
+    while(n<=10){
+        sum += n;
+        n++;
+    }
+
+    console.log("sum = " + sum);
+
+    // do ~ while
+    // do{}while(조건)
+    let i = 1;
+    let tot = 0;
+    do{ // do블럭은 반드시 한번은 수행
+        tot += i;
+        i++;
+    }while(i<=10)
+    console.log("tot = " + tot);
+
+    // 무한루프
+    // while(true){}
+    // for(;;){}
+
+    // 보조제어문
+    // break, continue
+    for(let k=0; k<5; k++){
+        if(k == 3) {
+            break; // 루프 탈출
+        }
+        console.log("k = " + k);
+    }
+
+    console.log("------------")
+    for(let k=0; k<5; k++){
+        if(k == 3) continue; // 아래코드 수행 안하고 다시 반복시작
+        console.log("k = " + k);
+    }
+</script>

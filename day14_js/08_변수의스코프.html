@@ -1,0 +1,65 @@
+<script>
+// [변수의 스코프 (Scope)]
+// 스코프란?
+// 스코프는 변수의 접근 가능한 범위를 의미
+// JavaScript에서는 변수의 스코프가 크게 
+// 전역 스코프와 지역 스코프로 구분
+
+// 1. 전역 스코프 (Global Scope)
+// 전역 변수는 함수 바깥에서 선언된 변수
+// 어디서든 접근 가능하며, 프로그램 전체에서 사용가능
+let globalVar = "I am global";
+
+function showGlobal() {
+    console.log(globalVar); // 출력: I am global
+}
+
+showGlobal();
+console.log(globalVar); // 출력: I am global
+
+// 2. 지역 스코프 (Local Scope)
+// 지역 변수는 함수, 블록(if, for 등) 안에서 선언된 변수
+// 해당 함수나 블록 내부에서만 접근 가능하며, 
+// 밖에서는 접근할 수 없음.
+function showLocal() {
+    let localVar = "I am local";
+    console.log(localVar); // 출력: I am local
+}
+
+showLocal();
+// console.log(localVar); // 오류: localVar is not defined
+
+// 3. 블록 스코프 (Block Scope)와 함수 스코프의 구분
+// 3-1. 블록 스코프 (Block Scope)
+// 블록 {} 안에서 선언된 변수는 해당 블록 내에서만 유효
+// let과 const는 블록 스코프를 가지며, var는 그렇지 않다.
+if (true) {
+    let blockScoped = "I am block scoped";
+    console.log(blockScoped); // 출력: I am block scoped
+}
+
+// console.log(blockScoped); // 오류: blockScoped is not defined
+
+//3-2. 함수 스코프 (Function Scope)
+// 함수 내에서 선언된 변수는 해당 함수 내부에서만 유효
+// var는 함수 스코프를 가지며, 블록 스코프를 따르지 않는다.
+
+function functionScope() {
+    if (true) {
+        // var로 선언된 functionScoped변수는
+        // 해당 if문 블럭을 벗어나 함수내에서는 얼마든지 사용 가능
+        var functionScoped = "I am function scoped";
+    }
+    if (true) {
+        // let으로 선언된 functionScoped2변수는
+        // 해당 if문 블럭을 벗어나서는 사용될 수 없음.
+        let functionScoped2 = "I am function scoped2";
+    }
+    console.log(functionScoped); // 출력: I am function scoped
+    console.log(functionScoped2); // 오류
+}
+
+functionScope();
+//console.log(functionScoped); // 오류: functionScoped is not defined
+
+</script>
