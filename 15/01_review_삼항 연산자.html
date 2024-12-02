@@ -1,0 +1,35 @@
+<script>
+ function calculateExpenses(transportation, drink, meal) {
+  // 총 비용 계산
+  const totalCost = transportation + drink + meal;
+
+  // 삼항 연산자를 이용하여 초과 비용 또는 "OK" 출력
+  const result = totalCost > 20000 ? `초과 비용: ${totalCost - 20000}원` : "OK";
+
+  // 결과 출력 (실제 환경에서는 문서에 출력하도록 수정)
+  console.log(result);
+}
+
+// 예시 사용
+calculateExpenses(5000, 3000, 12000); // 총 비용 20000원 이하이므로 "OK" 출력
+calculateExpenses(8000, 4000, 10000); // 총 비용 22000원 초과이므로 초과 비용 출력
+
+   // [문제] 교통비, 음료비, 식사비를 입력받아 전체 비용을 구하고,
+  //       비용이 20,000원 초과시 초과비용 출력, 20,000원 이하이면
+  //       "OK"를 문서에 출력하시오. (삼항연산자를 이용하세요.)    
+
+  // parseInt(문자열숫자) : 문자열숫자를 정수형으로 변환
+  // prompt() ==> 문자열을 리턴
+
+//   문자열연산 : "12" + "23" => 1223;
+
+// ------- 출력결과 --------
+// 전체 비용 : 18000
+// OK
+
+// 전체 비용 : 18000
+// 1000원 초과
+
+// 삼항연산자
+// 조건 ? 참일때값 : 거짓일때 값
+</script>

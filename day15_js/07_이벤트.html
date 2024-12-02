@@ -1,0 +1,20 @@
+이메일 수신 : <br>
+    <input onclick="showEmail()" type="radio" name="rgroup" value="y" id="y"><label for="y">동의</label>
+    <input onclick="hideEmail()" type="radio" name="rgroup" value="n" id="n"><label for="n">거부</label>
+
+<div id="email" style="display: none;">이메일 입력 : <input type="text" placeholder="이메일 입력">
+</div>
+<!-- <div id="email" style="opacity: 0;">이메일 입력 : <input type="text" placeholder="이메일 입력">
+</div> -->
+<input type="text" value="하이"> 
+
+<script>
+    function showEmail(){
+        document.getElementById("email").style.display="block";
+        document.getElementById("email").style.opacity=1;
+    }
+    function hideEmail(){
+        document.getElementById("email").style.display="none";
+        document.getElementById("email").style.opacity=0;
+    }
+</script>

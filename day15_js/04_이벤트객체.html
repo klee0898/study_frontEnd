@@ -1,0 +1,14 @@
+<button id="myBtn">Click Me!!</button>
+
+<script>
+    const myBtn = document.getElementById("myBtn");
+    // function(e) : 매개변수는 e, 또는 event 이름으로 많이 사용
+    // e or event를 이벤트객체라고 한다.
+    // 이벤트 객체 : 이벤트가 발생했을 때의 모든 이벤트정보를 갖고 있는 객체
+    myBtn.addEventListener('click', function(e){
+        console.log(e.type);
+        // 여기서 target은 이벤트가 발생된 요소(<= myBtn)
+        console.log(e.target.textContent); 
+        console.log(e);
+    });
+</script>

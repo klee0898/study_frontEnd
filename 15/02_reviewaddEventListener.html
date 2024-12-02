@@ -1,0 +1,22 @@
+<!-- #1. html tag event 속성 -->
+ <button onclick="alert('hi')">click</button> 
+ <button onclick="alert('하이')">클릭</button> 
+ <button id="byBtn">click</button>
+
+<script>
+    // #2. JavaScript code에서 event 핸들러 등록(addEventListener)
+    // 이벤트핸들러=이벤틀를 처리하는 객체=요소
+    const myBtn = document.getElementById('myBtb');
+    myBtn.addEventListener('click', function(){
+        alert("hi");
+    });
+
+    // #3. Html tag onclick  속성을 자바스크립트에 직접 처리 
+    const myBtn2 = document.getElementById('myBtn2');
+    myBtn2.onclick = function(){
+        alert("하이");
+    };
+
+
+
+</script>

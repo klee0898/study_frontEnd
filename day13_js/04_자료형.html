@@ -1,0 +1,92 @@
+<script>
+    // [ 자료형(데이터타입) ]
+    
+    // ------- 기본형(Primitive Type) --------
+    // Number	숫자, 정수, 실수, Infinity, NaN 포함
+    // String	텍스트 데이터
+    // Boolean	참(true), 거짓(false)
+    // Undefined	값이 초기화되지 않음
+    // Null	값이 없음을 명시적으로 표현
+    // Symbol	고유하고 변경 불가한 값
+    // BigInt	큰 정수
+
+    //** null은 자바스크립트에서 원시 타입(Primitive Type) 중 
+    // 하나이며, typeof null이 "object"를 반환하는 것은 
+    // 자바스크립트의 설계적 결함에서 비롯된 것
+    // 하위 호환성을 유지하기 위해 수정되지 않고 있음.
+    
+    // ------- 참조형(Reference Type) --------
+    // Object	키-값 쌍, 배열, 함수 등 포함
+    // Array, Function, Set, Map, Date,..  
+ 
+    // ************* 기본형 **************
+    // number
+    let x = 30; // 정수형
+    let y = 1.222; // 실수형
+
+    // string
+    let str = "Hello";
+    let str2 = 'Hello';
+    let str3 = "'Hello' World!!";
+    let str4 = "\'Hello\' World!!";
+
+    console.log(str3);
+    console.log(str4);
+
+    // boolean
+    let isAdult = true;
+    console.log(isAdult);
+
+    // null
+    let n = null;
+    console.log(n);
+    // 출력은 object 이지만 실제 타입은 기본형
+    // 자바스크립트 버그
+    console.log(typeof(n)); 
+    
+    // undefined 
+    let und;
+    console.log(und); //undefined
+    console.log(typeof(und)); //undefined
+
+    // ************* 참조형 **************
+    // 빈 객체 선언
+    let person = {};
+    // 선언후 멤버할당
+    person.firstName = "길동";
+    person.lastName = "홍";
+    person.age = 33;
+
+    console.log(person.firstName);//길동
+    console.log(person);
+
+    // 객체선언과 동시에 멤버할당
+    let p2 = {
+        firstName : "재석",
+        lastName : "유",
+        age : 33
+    }
+    console.log(p2);
+    console.log(p2.firstName); // 재석
+    console.log(typeof(p2)); // object
+
+    // 배열(Array)
+    let arr = ["samsung", "LG", "SK"];
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+
+    // 객체배열
+    let objArr = [person, p2];
+    console.log(objArr[0])
+    console.log(objArr[1])
+
+    console.log("---------");
+    // 서로 다른 타입을 배열에 저장 가능
+    let arr2 = ["samsung", 3, p2, null];
+    console.log(arr2[0]);
+    console.log(arr2[1]);
+    console.log(arr2[2]);
+    console.log(arr2[3]);
+    
+</script>

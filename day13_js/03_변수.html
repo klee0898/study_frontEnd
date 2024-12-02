@@ -1,0 +1,32 @@
+<script>
+    // 변수 선언 키워드 : var, let, const
+    // 변수의 타입은 값에 따라 정해진다.
+    var x = 7;
+    var y = 8;
+    var z = x + y;
+
+    var price = 2000 + x;
+    var str = "하이";
+
+    // typeof : 변수 타입 확인하기
+    console.log(typeof(str)); //string
+    console.log(typeof(x)); //number
+    console.log(typeof(price)); //number
+
+    x = 10; // 재할당
+    console.log(x);
+    var x = 100; // 재선언 가능
+    console.log(x);
+
+    // ES6문법에서 var 대신 let, const 권장
+    let xx = 10;
+    // let xx = 22; // 재선언 안됨, 에러
+    xx = 22; // 재할당
+    console.log(xx);
+
+    const a = 100; // 상수선언과 같다.
+    // const a = 111;
+    // 실행중 에러, 상수는 값수정 불가
+    // a = 222; // Assignment to constant variable.
+
+</script>

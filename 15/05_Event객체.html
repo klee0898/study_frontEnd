@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    
+    <form action="" id="joinForm">
+        이름 : <br><input type="text" id="name"><br>
+        이메일 :<br><input type="text" id="email"><br>
+        <br>
+        <input type="submit" value="회원가입">
+    </form>
+    
+    <script>
+        const frm = document.getElementById("joinForm")
+        frm.addEventListener("submit", function(e){
+            console.log(e);
+            frm.name/value.length == 0){
+                alert("이름을 입력하세요!!");
+                frm.name.foucus();
+
+            }
+            
+        });
+        
+    </script>
+</body>
+</html>

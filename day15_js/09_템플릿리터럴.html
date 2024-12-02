@@ -1,0 +1,41 @@
+<script>
+// Template Literal : 문자열을 더 간결하고 
+//                가독성 좋게 작성할 수 있도록 도와주는 기능
+//                따옴표 처리 쉽게해주는 기능
+
+// `(백틱)을 사용
+// 변수나 표현식을 ${} 안에 작성    
+
+// ${변수}
+let name = "홍길동";
+console.log("당신의 이름은 "+ name +"입니다");
+
+console.log(`당신의 이름은 ${name}입니다`);//당신의 이름은 홍길동입니다
+
+const country = "korea";
+const age = 25;
+
+// 문자열.toUpperCase() : 대문자로 변환
+const myInfo = `나의 국적 : ${country.toUpperCase()},  나이 : ${age} 세 `;
+console.log(myInfo);
+
+// ${표현식}
+const a = 10;
+const b = 20;
+const result = `${a} 와 ${b} 의 합계 : ${a + b}.`;
+console.log(result);
+
+// 다중행 문자열
+const line1 = `라인1
+라인2
+라인2`;
+console.log(line1); // 줄바꿈 자동적용
+
+// 예전방식
+const line2 = "라인1\
+라인2\
+라인3";
+
+console.log(line2); // 줄바꿈 적용안됨.
+
+</script>

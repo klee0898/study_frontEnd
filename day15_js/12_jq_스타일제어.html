@@ -1,0 +1,39 @@
+<!-- jQuery : 자바스크립트 라이브러리 중의 하나
+    자바스크립트를 편하게 사용할 수 있도록 만들어진 라이브러리     
+    제이쿼리를 사용하려면 라이브러리를 먼저 가져와야 한다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN(Content Delivery Network)  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="myClass">문단1</p>
+        <p id="myId">문단2</p>
+        <p>문단3</p>
+    </div>
+    <script>
+        // 문서가 준비(로딩)되면 함수를 수행하라
+        $(document).ready(function(){
+            // 태그로 선택
+            // $("p").css("background", "crimson");
+            // $("p").css("color", "white");
+
+            // 여러 스타일을 한번에 지정할 때
+            $("p").css({"color":"white", "background":"crimson"});
+
+            // 클래스로 선택
+            $(".myClass").css("background", "yellowgreen");
+
+            // id로 선택
+            $("#myId").css("background", "royalblue");
+
+        });
+    </script>
+</body>
+</html>

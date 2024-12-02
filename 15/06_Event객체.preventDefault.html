@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://google.com" id="myLink">Google</a>
+    <script>
+        const myLink = document.getElementById("myLink");
+        myLink.addEventListener('click', function(e){
+            e.preventDefault();
+            alert("링크가 막힘")
+        });
+    </script>
+</body>
+</html>

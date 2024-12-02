@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="joinForm">
+        이름 : <br><input type="text" id="name"><br>
+        이메일 :<br><input type="text" id="email"><br>
+        <br>
+        <input type="submit" value="회원가입">
+    </form>
+    <!-- preventDefault() 이벤트객체의 메서드
+        : 이벤트의 기본동작을 막아주는 역할
+    -->
+    <script>
+        var frm = document.getElementById("joinForm");
+        // submit : form 이벤트
+        frm.addEventListener("submit", function(e){
+            console.log(e);
+            // frm.name.value.length : 이름 input에 입력된 텍스트의 길이
+            if(frm.name.value.length == 0){
+                alert("이름을 입력하세요!!");
+                frm.name.focus();
+                // submit의 기본동작 : action속성에
+                // 설정된 위치로 입력된 값을 전송한 후
+                // 페이지가 새로고침된다.
+
+                // submit의 기본동작을 막아줌
+                e.preventDefault();
+                return; //함수의 종료
+            }
+
+            if(frm.email.value.length == 0){
+                alert("이메일을 입력하세요!!");
+                frm.email.focus();
+                e.preventDefault();
+                return; // 함수의 종료
+            }
+        });
+    </script>    
+</body>
+</html>

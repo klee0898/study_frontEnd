@@ -1,0 +1,37 @@
+<script>
+  // [문제] 교통비, 음료비, 식사비를 입력받아 전체 비용을 구하고,
+  //       비용이 20,000원 초과시 초과비용 출력, 20,000원 이하이면
+  //       "OK"를 문서에 출력하시오. (삼항연산자를 이용하세요.)    
+
+  // parseInt(문자열숫자) : 문자열숫자를 정수형으로 변환
+  // prompt() ==> 문자열을 리턴
+
+//   문자열연산 : "12" + "23" => 1223;
+
+// ------- 출력결과 --------
+// 전체 비용 : 18000
+// OK
+
+// 전체 비용 : 18000
+// 1000원 초과
+
+// 삼항연산자
+// 조건 ? 참일때값 : 거짓일때 값
+
+  let cost1 = prompt("교통비를 입력");
+  let cost2 = prompt("음료비를 입력");
+  let cost3 = prompt("식사비를 입력");
+
+  // 문자열 연산 예
+  let tot = cost1 + cost2 + cost3;
+  console.log(tot);
+
+  // 산술연산을 하기위해 숫자로 변환
+  tot = parseInt(cost1)+parseInt(cost2)+parseInt(cost3);
+  // console.log(tot);
+  document.write("전체 비용 : " + tot + "<br>");
+
+  let res = tot > 20000 ? tot - 20000 + "원 초과" : "OK";
+  document.write(res);
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+    // 호이스팅 : 컴파일시에 스코프의 가장 위로 끌어올린다.    
+    var aa;
+    console.log(aa); // undefined
+    
+    console.log(xx); //undefined(초기화되지 않았음)
+    var xx; // 변수 선언만 되어있고 초기화(할당)되지 않음.
+    xx = "Hello"; // ** Hello 값은 호이스팅 되지 않는다.**
+
+    var yy = "World"; // 선언후 초기화(할당)
+    console.log(yy);
+
+    // let으로 선언된 변수는 호이스팅되지 않는다.
+    // console.log(bb); //ReferenceError 에러
+    // let bb;
+
+    // 함수는 호이스팅이 발생한다.
+    printA(); // 호출가능
+
+    function printA(){
+        console.log("A"); // A
+    }
+
+    printA();
+</script>

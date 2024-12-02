@@ -1,0 +1,51 @@
+<script>
+    // 화살표연산자 : =>
+
+    // 익명함수 : function(){}
+
+    function hello(){
+        return "Hello World!!";
+    }
+    console.log(hello()); //Hello World!!
+    
+    // 함수를 변수로 할당받음, h변수는 == hello함수
+    var h = function hello(){
+        return "Hello World!!";
+    }
+
+    console.log(h());//Hello World!!
+
+    // => 기준으로 왼쪽은 매개변수 표시
+    //    오른쪽은 리턴문 또는 블럭안의 문장 
+    // => 기준 오른쪽에 두줄이상의 명령이 오는 경우는
+    //    {}을 사용한다. (한줄은 {} 생략가능)
+    var h2 = () => "Hello World!!";
+    console.log(h2());//Hello World!!
+
+    var h3 = function hh(){
+        console.log("HI");
+        return "hi";
+    }
+
+    var h3 = () => {
+        console.log("HI");
+        return "hi";
+    }
+
+    // 매개변수가 하나인 경우
+    function hello2(name){
+        return "Hello" + name;
+    }
+    var hello2 = (name) => "Hello" + name;
+
+    // 매개변수가 하나인 경우 () 생략 가능
+    var hello3 = name => "Hello" + name;
+
+    function hello3(name, age){
+        return "Hello " +name+", 나이 :" + age;
+    }
+
+    var h2 = (name, age) => "Hello " +name+", 나이 :" + age;
+    console.log(h2("김", 22));
+
+</script>

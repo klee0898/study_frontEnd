@@ -1,0 +1,19 @@
+<!-- #1. Html 태그에 이벤트 속성 -->
+<button onclick="alert('하이')">클릭</button>
+<button id="myBtn">클릭</button>
+<button id="myBtn2">클릭</button>
+
+<script>
+// #2. 자바스크립트 코드에서 이벤트 핸들러 등록(addEventListener)
+// 이벤트핸들러(= 이벤트를 처리하는 객체)
+const myBtn = document.getElementById('myBtn');
+myBtn.addEventListener('click', function(){
+    alert("하이");
+});
+
+// #3. Html 태그의 onclick 속성을 자바스크립트에서 직접 처리
+const myBtn2 = document.getElementById('myBtn2');
+myBtn2.onclick = function(){
+    alert("하이");
+};
+</script>
