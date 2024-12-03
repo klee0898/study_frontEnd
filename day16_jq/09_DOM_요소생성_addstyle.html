@@ -1,0 +1,22 @@
+
+
+<div id="c">
+    <button id="addElement">요소추가</button>
+</div>
+
+<script>
+    const c = document.getElementById("c");
+    const btn = document.getElementById("addElement");
+
+    btn.addEventListener("click", () => {
+        const ne = document.createElement("div");
+        ne.textContent = "새로운 요소";
+
+        ne.style.backgroundColor = "lightblue";
+        ne.style.padding = "10px";
+        ne.style.margin = "10px";
+        ne.style.border = "3px solid red";
+
+        c.appendChild(ne);
+    });
+</script>

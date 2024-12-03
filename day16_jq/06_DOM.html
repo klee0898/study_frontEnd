@@ -1,0 +1,104 @@
+<script>
+    `
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <h1 id="header">Hello, World!</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+<script>
+`
+[ DOM의 핵심 개념 ]
+
+#1. DOM이란?
+
+DOM은 HTML, XML 문서를 객체 기반으로 표현한 계층적 트리 구조
+각 요소(HTML 태그), 속성, 텍스트는 DOM 트리의 노드(Node)로 표현
+프로그래밍 언어(JavaScript 등)를 사용하여 DOM에 접근하거나 수정할 수 있음. -->
+
+<!-- 
+#2. DOM 트리 
+
+Document
+ └── html
+      ├── head
+      │     └── title
+      │           └── "My Page"
+      └── body
+            ├── h1
+            │     └── "Hello, World!"
+            └── p
+                  └── "This is a paragraph."
+
+#3. DOM의 구성 요소
+
+DOM은 **노드(Node)**라는 단위로 이루어져 있으며, 
+다음과 같은 주요 노드 유형이 있음.
+
+Document 노드:
+    DOM 트리의 최상위 노드로, HTML 문서를 나타냅니다.
+
+Element 노드:
+    HTML 태그를 나타냅니다. <div>, <p> 등.
+
+Attribute 노드:
+    HTML 요소의 속성을 나타냅니다. 예: id="header", class="content" 등.
+
+Text 노드:
+    요소 내부의 텍스트를 나타냅니다.
+
+Comment 노드:
+    HTML 주석을 나타냅니다.               
+
+
+#4. DOM과 JavaScript
+    JavaScript를 사용하여 DOM에 접근하고 조작할 수 있음.
+    
+    <주요 작업 예시>
+
+    DOM 접근:
+        document.getElementById(id): 특정 id 값을 가진 요소를 가져옴.
+        document.querySelector(selector): CSS 선택자 방식으로 요소를 가져옴.
+        document.getElementsByClassName(className): 특정 클래스 이름을 가진 요소를 가져옴.    
+
+    DOM 조작:
+        텍스트 변경: element.textContent 또는 element.innerHTML
+        속성 변경: element.setAttribute(name, value) 또는 element.id = "newId"
+        스타일 변경: element.style.property = "value"
+
+        header.textContent = "Welcome!";
+        header.style.color = "blue";
+        header.setAttribute("class", "highlight");
+
+    DOM 이벤트:
+        JavaScript로 사용자 상호작용 이벤트를 처리할 수 있음.
+
+        header.addEventListener("click", () => {
+            alert("Header clicked!");
+        });
+
+
+#5. DOM 주요 메서드
+    A. 요소 선택:
+        getElementById(), getElementsByClassName(), getElementsByTagName()
+        querySelector(), querySelectorAll()
+    
+    B. 요소 생성/삭제:
+        document.createElement(tagName)
+        parent.appendChild(node)
+        parent.removeChild(node)
+    
+    C. 요소 속성/내용 수정:
+        element.setAttribute(name, value)
+        element.getAttribute(name)
+        element.innerHTML, element.textContent  
+
+`    
+</script>
+    
+    `
+</script>

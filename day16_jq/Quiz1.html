@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN(Content Delivery Network)  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>    
+    <style>
+        .greeting {
+            background-color: #ddd;
+            padding: 20px;
+            color: dodgerblue;
+            text-align: center;
+        }
+        .greeting.active{
+            background-color: dodgerblue;
+            color:white;
+        }
+    </style>    
+</head>
+<body>
+    <div class="frame">
+        <h1 class="greeting">안녕하세요. 여러분!!</h1>
+    </div>
+    <div class="btns">
+        <button class="" id="btn1">클래스추가</button>
+        <button class="" id="btn2">클래스제거</button>
+        <button class="" id="btn3">클래스토글</button>
+        <button class="" id="btn4">Reset</button>
+    </div>
+    <script>
+        $("#btn1").click(function(){
+            // let txt = $(this).text();
+            // $(".greeting").text(txt);
+            // 위의 두줄 대신
+            $(".greeting").text($(this).text());
+
+            // 직접 설정
+            // $(".greeting").text("클래스추가");
+            $(".greeting").addClass("active");
+
+        });
+        $("#btn2").click(function(){
+            $(".greeting").text($(this).text());
+            // $(".greeting").text("클래스제거");
+            $(".greeting").removeClass("active");
+        });
+        $("#btn3").click(function(){
+            $(".greeting").text($(this).text());
+            // $(".greeting").text("클래스 토글");
+            $(".greeting").toggleClass("active");
+        });
+        $("#btn4").click(function(){
+            $(".greeting").removeClass("active");
+            $(".greeting").text("안녕하세요. 여러분!!");
+        });
+    </script>
+</body>
+</html>

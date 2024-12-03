@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- jQuery CDN(Content Delivery Network)  -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <style>
+        .menu{
+            list-style: none;
+            width: 200px;
+            padding: 0;
+            border: 1px solid red;
+            text-align: center;
+        }
+        .menu li > a {
+            background-color: #000;
+            color: white;
+            display: block; padding: 5px;
+        }
+        .sub-menu{ display: none;}
+        .sub-menu a {
+            display: block; padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+     children() : 바로 아래 자식요소
+     siblings() : 형제요소   
+    -->
+    <ul class="menu">
+        <li>
+            <a href="#none">MENU-1</a>
+            <div class="sub-menu">
+                <a href="#none">SUB-MENU-1</a>
+                <a href="#none">SUB-MENU-2</a>
+                <a href="#none">SUB-MENU-3</a>
+                <a href="#none">SUB-MENU-4</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- 
+<script>
+        $(`.menu li').nouseenter(()=>{
+        $().children('.sub-menu').slideDown();
+        });
+    </script>
+
+    <script>
+        $(`.menu li').nouseenter((function)=>{
+     $('.sub-menu').slideDown(500);
+        $(this).children('.sub-menu').slideDown();
+        });
+    </script>-->
+
+    <script>
+        // stop() 중복애니메이션 방지
+        $('.menu li').mouseenter(function(){
+            // $('.sub-menu').slideDown(500);
+            $(this).children('.sub-menu').stop().slideDown();
+        });
+        $('.menu li').mouseleave(function(){
+            // $('.sub-menu').slideUp(500);
+            $(this).children('.sub-menu').stop().slideUp();
+        });
+
+    </script>
+
+</body>
+</html>

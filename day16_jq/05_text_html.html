@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN(Content Delivery Network)  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>      
+</head>
+<body>
+    <div>
+        <em title="italic display"><b>제이쿼리</b> 스터디</em>
+        <p id="myId">문단</p>
+        <div id="d">안녕</div>
+        <button class="btn1">클릭</button>
+        <button class="btn2">리셋</button>
+    </div>
+    <script>
+        // text() : 요소의 내용(텍스트 콘텐츠)을 가져오거나, 설정 (js : innerText)
+        // html() : 요소의 내용(HTML태그가 포함)을 가져오거나, 설정(js : innerHTML)
+
+        // $(document).ready(function(){});
+        $(document).ready(()=>{
+            // text() : 내용읽어오기, html태그를 무시
+            // text("새텍스트") : 새텍스트로 설정(매개변수값으로 변경)
+            let txt1 = $("#myId").text(); // js의 innerText
+            // $("#myId").text("나의아이디"); // 나의아이디로 변경
+
+            let txt2 = $("em").html(); // js의 innerHTML
+            // $("em").html("<strike>제이쿼리</strike>");
+            // alert(txt1);
+            let txt3 = $("#d").text();
+
+            $(".btn1").click(function(){
+                // title 속성값 가져오기
+                let title = $("em").attr("title");
+                // alert(title);
+
+                // 문단 => 안녕                
+                $("#myId").text(txt3);
+                // 안녕 => title
+                $("#d").text(title);
+            });
+
+            // 초기상태로 리셋
+            $(".btn2").click(function(){
+                $("#myId").text(txt1);
+                $("#d").text(txt3);
+            });
+        });
+    </script>
+</body>
+</html>

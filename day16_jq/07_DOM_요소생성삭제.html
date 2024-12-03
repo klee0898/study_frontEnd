@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"><p>문단</p> </div>
+    
+    <button id="addElement">요소추가</button>
+    <!-- <button id="addElement">새로운 p태그</button> -->
+    <button id="removeElement">요소삭제</button>
+    <script>
+        let c = document.getElementById("container");
+        let btn = document.getElementById("addElement");
+        let btn2 = document.getElementById("removeElement");
+
+        // 새로운 요소 생성 
+        btn.addEventListener('click', () => {
+            const ne = document.createElement("p");
+            ne.textContent = "새로운 p태그";
+
+            // 새로운 요소 추가
+            c.appendChild(ne);
+            
+        });
+
+        btn2.addEventListener('click' , ()=>{
+             //.appendChild(c.lastChild);  //
+            c.removeChild(c.lastElementChild);
+
+        
+
+        });
+
+    </script>
+</body>
+</html>

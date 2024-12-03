@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery : CDN은 Content Delivery Network(콘텐츠 전송 네트워크)의 약자입니다.
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+-->
+
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <select name="" id="select1" onchange="doChange(this)">
+        <option value="">국가</option>
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <select name="" class="city" id="select2" style="display: none;">
+        <option value="">서울</option>
+        <option value="">대구</option>
+        <option value="">대전</option>
+        <option value="">부산</option>
+    </select>
+    <select name="" class="city" id="select3" style="display: none;">
+        <option value="">베이징</option>
+        <option value="">상하이</option>
+        <option value="">스챤성</option>
+        <option value="">산둥</option>
+    </select>
+    <select name="" class="city" id="select4" style="display: none;">
+        <option value="">도쿄</option>
+        <option value="">나고야</option>
+        <option value="">오사카</option>
+        <option value="">대마도</option>
+    </select>
+    <script>
+        function doChange(obj){
+            //.city인 요소를 모두 선택
+            // querySelectorAll()는 배열을 리턴, cities는 배열이 된다.
+            let cities = document.querySelectorAll(".city");
+            for(let city of cities){    city.style.display = "none";
+            }
+
+            // display = "block": 블록요소로 바뀌면서 화면에 표시, 
+            // display="" : 자신의 기본 스타일을 유지하면서 화면에 표시, select(인라인블록요소)
+            if(obj.value == "KO"){
+                document.getElementById("select2").style.display="";
+            }else if(obj.value == "CN"){
+                document.getElementById("select3").style.display="";
+            }else if(obj.value == "JP"){
+                document.getElementById("select4").style.display="";
+            }
+        }
+    </script>
+
+</body>
+</html>

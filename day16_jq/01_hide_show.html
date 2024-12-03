@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN(Content Delivery Network)  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <style>
+        a{
+            display: inline-block;
+            background-color: #ddd;
+            text-decoration: none;
+            padding: 5px;
+            width: 110px;
+            text-align: center;
+            color: #000;
+        }
+        div{
+            height: 200px;
+            background-color: dodgerblue;
+            width: 230px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="#none" class="show-btn">보이기</a>
+    <a href="#none" class="hide-btn">감추기</a>
+    <div>Box</div> -->
+
+    <a href="#none" class="btn">보이기/감추기</a>
+    <div>Box</div>
+    <script>
+        $('.show-btn').click(function(){
+            $('div').show();
+        });
+        $('.hide-btn').click(function(){
+            $('div').hide();
+        });
+
+        $('.btn').mouseenter(function(){
+            $('div').show();
+        });
+        $('.btn').mouseleave(function(){
+            $('div').hide();
+        });
+    </script>
+</body>
+</html>

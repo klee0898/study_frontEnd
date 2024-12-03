@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+   
+    
+    <style>
+        .btn{width: 300px;}
+        .btn span{background-color: #ccc;
+            padding: 5px;width: 100px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn span.active{
+            background-color: #fff;
+            border: 1px solid #000;
+        }
+        
+        </style>
+
+<div class="btn">
+    <span>공지사항</span>
+    <span>갤러리</span>
+</div>
+<script>
+    $('.btn span').click(function(){
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    });
+</script>
+</body>
+</html>

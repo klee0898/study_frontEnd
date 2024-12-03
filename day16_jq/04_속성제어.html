@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN(Content Delivery Network)  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+</head>
+<body>
+    <button class="" data-info="sample-data" id="btn1">Click me!!</button>
+    <hr>
+    <img id="myImg" src="img/야옹.png" alt="고양이">
+
+    <script>
+        // $(document).ready(function(){ == $(function(){
+        $(function(){
+            $('#btn1').click(function(){
+                // attr() : 속성값 가져오기
+                let datainfo = $(this).attr("data-info");
+                alert("data-info : " + datainfo);
+            });
+
+            // 문서가 로딩되면서 이미지 교체
+            $('#myImg').attr('src', 'img/woman.jpg');
+
+            // 이미지 클릭시 이미지 교체
+            $('#myImg').click(function(){
+
+                // src 속성값 가져오기
+                let currentSrc = $(this).attr("src");
+                
+                if(currentSrc === "img/야옹.png"){
+                    // src 속성을 'img/woman.jpg'로 변경
+                    // $(this).attr('src', 'img/woman.jpg');
+
+                    // 여러 속성을 동시에 변경
+                    $(this).attr({src:'img/woman.jpg', alt:'여성'});
+                }else{
+                    // $(this).attr('src', 'img/야옹.png');
+                    $(this).attr({src:'img/야옹.png', alt:'고양이'});
+                }
+            });
+        });
+
+
+    </script>
+</body>
+</html>

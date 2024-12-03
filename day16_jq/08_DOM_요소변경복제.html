@@ -1,0 +1,47 @@
+<div id="container">
+    <p id="r">A</p>
+</div>
+
+<button id="rBtn">요소변경</button>
+<button id="cBtn">요소복제</button>
+<button id="clearBtn">모든요소삭제</button>
+
+<script>
+    let c = document.getElementById("container");
+    let btn = document.getElementById("rBtn");
+    let cBtn = document.getElementById("cBtn");
+    let clearBtn = document.getElementById("clearBtn");
+
+    clearBtn.addEventListener('click', ()=>{
+        while(c.firstChild){ // container안에 firstChild있으면 true, 없으면 faild
+            
+            c.removeChild(c.firstChild);
+        }
+
+    });
+
+    btn.addEventListener('click', ()=>{
+        const ne = document.createElement("p");
+        ne.textContent = "B";
+        ne.id = "r"; // id 속성도 함께 만듦
+        
+        const old= document.getElementById("r");
+
+      
+       
+         // 변경
+         c.replaceChild(ne, old);
+    });
+
+    cBtn.addEventListener('click', ()=>{
+        const ap = document.getElementById("r");
+        // cloneNode() : 해당 요소를 복제
+        // true는 해당요소의 자식노드(텍스트)까지 모두 포함
+        // false는 해당요소만 복제(자식노드는 제외)
+        const ce = ap.cloneNode(true); 
+
+        c.appendChild(ce); // 복제된 요소를 추가
+    });
+
+    
+</script>
