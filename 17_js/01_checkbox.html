@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="doSave">Save</button>
+    <div>
+        <label>
+         <input type="checkbox" name="chk_lang" value="html" />HTML
+        </label>
+        <!-- <label>
+         <input type="checkbox" name="chk_lang" value="html" checked />HTML
+        </label> -->
+        <label>
+         <input type="checkbox" name="chk_lang" value="spring"/>Spring
+        </label>
+        <label>
+         <input type="checkbox" name="chk_lang" value="java"/>Java
+        </label>
+        <label>
+         <input type="checkbox" name="chk_lang" value="js"/>javascript
+        </label>
+        <label>
+         <input type="checkbox" name="chk_lang" value="SpringBoot"/>SpringBoot
+        </label>
+    </div>
+    <script>
+    
+        function doSave(){
+            // name속성이 chk_lang인 요소(객체)를 모두 가져와서 chk_langs변수 할당
+            // 변수 chk_langs는 배열
+            let chk_langs = document.getElementsByName("chk_lang");
+            console.log(chk_langs);
+            console.log(chk_langs.length); //4
+
+            let chk_items = []; // 빈 배열 생성, 체크된 체크박스의 value값을 담을 배열
+            for(let i = 0; i<chk_langs.length; i++){
+                // checked속성은 체크박스가 체크되면 true값, 아니면 false값을 갖는 속성
+                console.log(chk_langs[i].checked);
+
+                if(chk_langs[i].checked){
+                    // push() : 배열에 추가
+                    chk_items.push(chk_langs[i].value);
+                }
+            }
+
+            console.log(chk_items);
+        }
+    </script>
+
+    </script>
+</body>
+</html>

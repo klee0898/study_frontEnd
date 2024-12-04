@@ -1,0 +1,58 @@
+<script>
+    // 현재 날짜/시간
+    const now = new Date();
+    console.log(now);
+
+    // 특정날짜 지정
+    const d = new Date('2024-11-21');
+    console.log(d);
+                         // 년   월  일 시 분 초 
+    // const d2 = new Date(2024, 11, 3, 14, 0, 0); // 2024년 12월 3일 14시
+    // 년도 두자리면 1900년대 인식
+    const d2 = new Date(24, 11, 3, 14, 0, 0); // 1924년 12월 3일 14시
+    console.log(d2);
+
+    const date = new Date();
+    console.log(date.getFullYear()); // 연도
+    // 월: 0부터 시작, 0:1월, ~ 11:12월
+    console.log(date.getMonth()); // 11   
+    console.log(date.getDate());     // 4, 일
+    // 요일: 0부터 시작, 0:일요일, ~ 6:토요일
+    console.log(date.getDay());      // 3, 수요일
+    console.log(date.getHours());    // 시
+    console.log(date.getMinutes());  // 분
+    console.log(date.getSeconds());  // 초
+
+    // Date객체 생성
+    const d3 = new Date();
+
+    // 연도설정
+    d3.setFullYear(2025);
+    console.log(d3);
+
+    // 월설정
+    d3.setMonth(6); // 7월
+    console.log(d3);
+
+    // 일설정 : setDate(), 시:  setHour(), 분: setMinutes(), 초:setSeconds()
+
+    // 날짜 간격 
+    const dd = new Date("2024-11-10"); // 타임스탬프<- 유닉스타임
+    const dd2 = new Date("2024-12-10");
+
+    const diffTime = dd2 - dd;
+    console.log(diffTime); // 2592000000 <- 유닉스타임
+    // 1000 -> 1초, 1000*60*60*24 == 1초*60*60*24 == 24시간
+    const diffDays = diffTime/(1000*60*60*24)
+    console.log(`날짜간격 : ${diffDays}일`);
+
+    // 타임존
+    const ddd = new Date();
+
+    console.log(ddd); // Wed Dec 04 2024 14:38:50 GMT+0900 (한국 표준시)
+    console.log(ddd.toUTCString()); // Wed, 04 Dec 2024 05:39:20 GMT
+    console.log(ddd.toISOString()); // 2024-12-04T05:41:13.124Z
+    console.log(ddd.toLocaleString()); // 2024. 12. 4. 오후 2:40:21
+
+
+</script>

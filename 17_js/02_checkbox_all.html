@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>선택삭제</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="chkall" onclick="checkAll()"></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="chk" value="0"/></td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" value="1"/></td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" value="2"/></td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" value="3"/></td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" value="4"/></td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let chks = document.getElementsByClassName("chk");
+
+        function checkkAll(){
+           let isChecked = document.getElementById("chkall").checked;
+
+           for(let i = 0; i<chks.length; i++){
+            chks[i].checked = isChecked;
+           }
+            
+        }
+
+        function selDel(){
+            let selValues = [];
+            for(let i =0; i<chks.length; i++){
+                if(chks[i].checked){
+                    selValues.push(chks[i].value);
+                }
+            }
+
+            console.log("삭제될 값: " +  selValues);
+            console.log("삭제될 값: " +  selValues);
+        }
+    </script>
+</body>
+</html>

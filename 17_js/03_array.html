@@ -1,0 +1,71 @@
+
+<script>
+    // 배열생성방법 / 배열은 참조형
+    const aa = ["apple", "banana", "cherry"];
+    
+    const bb = new Array("apple", "banana", "cherry");
+    // 빈배열생성
+    const cc = [];
+    const dd = new Array();
+
+    // JS 배열은 크기를 동적으로 변경가능
+     aa.push("melon");  // 추가
+    console.log(aa);
+
+    var val = aa.pop(); // 마지막 요소 가져옴
+    console.log(val);
+    console.log(aa[1]);
+
+    //  다양한 데이터 타입을 담을 수 있음
+    const mixed = [1, "a", true, {key:"value"}, function(){return "hello"}];
+    console.log(typeof(mixed));   //  
+
+      //  요소 추가 : push()-끝에 추가, unshift()-앞에 추가
+      //  요소 제거 : pop()-끝 요소 제거 , unshift()-앞 요소 제거
+
+     //   const arr = [1,2,3];
+      let arr = [1,2,3];
+      arr.push(4);
+      console.log(arr);  // [1,2,3,4];
+
+ 
+      arr.pop();
+      console.log(arr);  // [1,2,3];
+
+      arr.unshift(0);
+      console.log(arr);  // [0,1,2,3];
+
+      arr.shift(0);
+      console.log(arr); // [1,2,3];
+      console.log("~~~~~~~~~~");
+      
+      //  정렬 : sort reverse  순서 뒤집기
+      let f = ["b", "a","c"];
+      console.log(f.sort());  // ["a", "b","c"];
+      console.log(f.reverse()); // ["c", "a","b"];
+      console.log("~~~~~~~~~~");
+       // 배열 합치기, 배열의 요소를 문자열로 합치기
+    // concat(), join(구분자)
+    const ff = [1,2];
+    const gg = [3,4];
+    const fg = ff.concat(gg);
+    console.log(fg);
+
+    const str = ["Hello", "JavaScript"].join("/"); // "Hello/JavaScript"
+    console.log(str);
+    const h = ["손", "김", "이"];
+    const hh = h.join("-"); // "손-김-이"
+    console.log(hh);
+
+    console.log("~~~~~~~~~~~~~");
+    // split() : 문자열을 배열로반환 (join()과 반대)
+    const txt = "손/김/이";
+    const result = txt.split("/");
+    console.log(result); // ['손', '김', '이']
+
+
+
+
+
+
+</script>

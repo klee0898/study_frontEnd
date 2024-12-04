@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="">
+        <label for="numberInput">숫자만입력</label>
+        <input type="number" id="numberInput">
+        <button>제출</button>
+    </form> -->
+
+    <!-- 자바스크립트를 이용한 숫자만 입력받기 -->
+    <input type="text" id="numberInput">
+    <script>
+        const numberInput = document.getElementById("numberInput");
+
+        // input 이벤트 : input 입력박스에 값이 변경될때 마다 발생하는 이벤트
+        numberInput.addEventListener('input', ()=>{
+            const value = numberInput.value;
+            
+            // !/^\d*$/.test(value) : 숫자 이외의 값 입력시 true, 숫자면 false
+            // ex>
+            //  /^\d*$/.test("121212") => true, /^\d*$/.test("abcd") => false
+
+            if (!/^\d*$/.test(value)) {
+                                    // 숫자 이외의 값 입력시 공백으로 변환
+
+        }
+
+        });
+    </script>
+</body>
+</html>

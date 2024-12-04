@@ -1,0 +1,39 @@
+<!-- p.370 377 -->
+<!-- #1. 이동 애니메이션 -->
+<style>
+    .box{
+        width: 100px; height: 100px;
+        background-color: red;
+        animation: moveRight 2s linear infinite;
+    }
+
+    /* 키프레임 정의 */
+    @keyframes moveRight {
+        0%{
+            transform: translateX(0); 
+        }
+        100%{
+            transform: translateX(200px);
+        }
+    }
+
+    @keyframes changeColor {
+        0%{
+            background-color: red;
+        }
+        50%{
+            background-color: blue;
+        }
+        100%{
+            background-color: green;
+        }
+    }
+    .box2{
+        width: 100px; height: 100px;        
+        animation: changeColor 4s linear infinite;
+    }
+
+</style> 
+
+<div class="box"></div>
+<div class="box2"></div>

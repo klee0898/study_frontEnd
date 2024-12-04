@@ -1,0 +1,29 @@
+<script>
+    // window객체 : 브라우저환경을 나타내는 최상위 객체
+    alert("hi"); // window객체 생략, == window.alert()
+
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+  
+    // window 객체 : 브라우저 환경을 나타내는 최상위 객체
+    // alert("하이"); // window 객체 생략, == window.alert()
+
+    // 브라우저와 관련된 메서드는 window객체에 정의되어 있음.
+    console.log(window.innerWidth); // 브라우저 창의 너비
+    console.log(window.innerHeight); // 높이
+
+    // resize 이벤트 : 브라우저의 크기가 조정될때 발생하는 이벤트
+    // window.addEventListener('resize', ()=>{
+    //     alert("창크기가 조정되었음!!");
+    // });
+
+    // setTimeout, setInterval 메서드 모두 window객체의 메서드
+    window.setTimeout(()=>{
+        console.log("3초후 실행");
+    }, 3000);
+
+    // location.href == window.location.href
+    // prompt== window.prompt(), confirm()== window.confirm()
+
+    // document.write("하이"); == window.document.write("하이");
+</script>

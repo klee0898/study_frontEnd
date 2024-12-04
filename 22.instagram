@@ -1,0 +1,27 @@
+<!-- transform : 크기, 위치, 회전 등을 변경하는 속성
+        translate(x, y), rotate(deg), scale(), skew()
+     transition : 시간 따라 변화시키는 속성
+-->
+
+<style>
+    @keyframes complexAni {
+        0%{
+            transform: translateX(0) scale(1);
+            background-color: red;
+        }
+        50%{
+            transform: translateX(150px) scale(1.5);
+            background-color: blue;
+        }
+        100%{
+            transform: translateX(300px) scale(1) rotate(45deg);
+            background-color: green;
+        }
+    }
+    .box{
+        width: 100px; height: 100px;        
+        animation: complexAni 4s ease-in-out infinite;
+    }
+</style>
+
+<div class="box"></div>
