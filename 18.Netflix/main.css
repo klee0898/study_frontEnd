@@ -1,0 +1,205 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("imgsNetflix/bg.jpg");
+    backdrop-filter: blur(30px);
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+a{text-decoration: none;}
+.wrapper{
+    height: 100vh;
+    /* height: 100%; */
+    background: linear-gradient(to top, black, rgb(255, 249, 249));
+    background: linear-gradient(to top, black, gray);
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.126));
+
+}
+.wrapper header{
+    width: 90%;margin: auto;
+    border: 1px solid rgb(233, 245, 210);
+    /* border: 1px solid rgb(244, 248, 9); */
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper header .logo{}
+.wrapper header .logo img{width: 200px;}
+.wrapper header .logo-area {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.wrapper header .logo-area #lang{
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color:  #0f0f0f;
+    color: #fff;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.519);
+    outline: none;
+}
+.wrapper header .logo-area #lang option{
+    background-color: #fff;
+    color: #000;
+   
+}
+.wrapper header .logo-area .login{
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+/* hero===--- */
+.wrapper .hero{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    background-image: url('imgsNetflix/bg.jpg');
+    height: 60vh;
+    /* 최소높이 */
+    min-height: 400px;
+    animation: moveBackground 10s linear infinite;
+}
+/* ::before의 부모는 .hero */
+.wrapper .hero::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    border-radius: inherit;
+    /* 테두리 두께역할 */
+    padding: 2px; 
+    background: linear-gradient(to right bottom, white, rgba(0, 0, 0, 0.584) 25%);
+
+    /* 마스크 */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); 
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude; 
+    -webkit-mask-composite: destination-out;   
+
+}
+
+.wrapper .hero .inner{
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #9d22068f, rgba(0, 0, 0, 0.682) 20%, rgba(0, 0, 255, 0)) ;
+}
+.wrapper .hero .inner .heading{
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    color: white;
+    font-size: 60px;
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+.wrapper .hero .inner .heading span{
+    display: block;
+    user-select: none;
+}
+.wrapper .hero .inner p{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    user-select: none;
+}
+.wrapper .hero .curve{
+    position: absolute;
+    bottom:-12px;
+    /* border: 1px solid yellow; */
+}
+.wrapper .hero .controls{
+    position: absolute;
+    right: 20px;bottom: 20px;
+}
+.wrapper .hero .controls .play-btn{
+    border-radius: 50%;
+    background-color: #000;
+    border: none;
+    padding: 5px;
+    transition: .3s;
+}
+.wrapper .hero .controls .play-btn:hover{
+    background-color: #dad5d5;
+}
+.wrapper .hero .controls  i{
+    background-color: none;
+    border: 1px solid red;
+    font-style: 50px;
+}
+/* ------------ contents ----------- */
+.wrapper .contents{margin: 50px auto; 
+    width: 90%; 
+}
+.wrapper .contents .search-area{    
+    text-align: center;    
+}
+.wrapper .contents .search-area p{    
+    color: rgba(255, 255, 255, 0.507);
+}
+.wrapper .contents .search-area .search{
+    margin: 20px;
+}
+.wrapper .contents .search-area .search input{    
+    padding: 20px 20px;  background-color: #000;   outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.547);
+    border-radius: 30px;  width: 380px;  vertical-align: top;
+}
+.wrapper .contents .search-area .search button{
+    padding: 15px 20px;   background-color: red;   color: white;
+    font-size: 20px;   border-radius: 30px;   border: none;    width: 200px;
+    margin-left: 10px;    transition: .3s;
+}  
+.wrapper .contents .search-area .search button:hover{
+    background-color: rgb(168, 3, 3);
+}  
+.wrapper .contents .search-area .search button i{
+    margin-left: 20px;    
+}
+.wrapper .contents .detail-info{
+    margin-top: 40px;   display: flex; padding: 30px 50px;   border-radius: 20px;
+    background-color: #ffffff46;   border: 1px solid rgba(255, 255, 255, 0.459);
+    transition: .10s ease;
+}
+.wrapper .contents .detail-info .txt{flex: 1;}
+.wrapper .contents .detail-info .txt h3{ color: white; }
+.wrapper .contents .detail-info .txt p{  margin-top: 10px;    color: white;}
+.wrapper .contents .detail-info .detail-btn{
+    flex:1;  text-align: right; }
+
+.wrapper .contents .detail-info .detail-btn a{
+    padding: 5px 12px;   background-color: black;   color: white;
+    border: 1px solid rgba(255, 255, 255, 0.591);    border-radius: 20px;
+    line-height: 56px;
+}
+
+.wrapper .footer{}
+
+/* 배경 애니메이션 */
+@keyframes moveBackground {
+    0%{        
+        /* 가로:left, center, right, 세로: top center bottom */
+        /*                   가로  세로 */
+        background-position: left center;
+    }
+    50%{
+        background-position: right center;
+    }
+    100%{
+        background-position: left center;
+    }
+}
