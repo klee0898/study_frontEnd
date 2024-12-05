@@ -1,0 +1,69 @@
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+body{
+    background-color: #ccc;
+}
+
+.demo-slider{
+    width: 1000px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.demo-slider .item{
+    padding: 0 10px;
+    /* border: 1px solid #000; */
+}
+/* ease == ease-in-out */
+.demo-slider .item img{    
+    width: 100%;
+    transition: .3s ease; 
+}
+
+.demo-slider .item:hover img{
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.67);
+}
+
+
+
+
+
+/* 기본으로  absolute로 설정 
+    bottom부분만 재조정
+*/
+.slick-dots{
+    bottom: 10px;
+}
+
+.prevBtn{
+    position: absolute;
+    top: 50%;
+    left:-60px;
+}
+.nextBtn{
+    position: absolute;
+    top: 50%;
+    right:-100px;
+}
+.prevBtn, .nextBtn{
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+}
+
+.prevBtn i{
+    background-color: #ffffff8c;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 7px;
+    color: #7c7676;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.547);
+    cursor: pointer;
+}
+
+.nextBtn i{
+    color: white;
+    font-size: 80px;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.627);
+    cursor: pointer;
+}
