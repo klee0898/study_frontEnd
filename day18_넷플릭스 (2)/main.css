@@ -197,6 +197,134 @@ a{
     line-height: 56px;
 }
 
+/* --------- 슬라이더 영역 --------------- */
+.contents .sliders{
+    margin-top: 30px;
+}
+.contents .sliders h2{
+    color: white;
+    font-size: 30px;
+}
+.contents .sliders .contents-slider{
+    /* border: 1px solid yellow; */
+}
+.contents .sliders .contents-slider .item{
+    /* border: 1px solid yellow;     */
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.contents .sliders .contents-slider .item img{
+    width: 100%;
+}
+
+.contents .sliders .contents-slider .item {    
+    width: 100%;
+    transition: .3s ease; 
+}
+
+.contents .sliders .contents-slider .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.67);
+}
+
+
+.prevBtn{    
+    position: absolute;
+    top: 50%;
+    left:-30px;
+}
+
+.nextBtn{
+    position: absolute;
+    top: 50%;
+    right:-30px;
+}
+
+.prevBtn, .nextBtn{
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.395);
+    border: none;
+    /* border: 1px solid yellow; */
+    height: 70px;
+    border-radius: 10px;
+    transition: .3s ease;
+}  
+
+.prevBtn:hover, .nextBtn:hover{
+    background: rgba(255, 255, 255, 0.26);
+}    
+
+.prevBtn i, .nextBtn i{        
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+/* -------- 가입해야 하는 이유 ----- */
+.joinarea{
+    margin-top: 30px;
+}
+.joinarea h2{
+    color:white;
+    font-size: 30px;
+}
+
+/* -------- 자주 묻는 질문 -------- */
+.faq{ margin-top: 30px;}
+.faq h2{
+    font-size: 30px;
+    color:white;
+    margin-bottom: 20px;
+}
+.faq input[name="faq-item"]{
+    display: none;
+}
+
+.faq label{
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 20px;
+    background-color: #ffffff1e;
+    transition: .3s;
+
+}
+.faq label:hover{
+    background-color: #ffffff4f;
+}
+
+.faq label span{
+    float: right;
+    transition: .3s;
+}
+.faq input[name="faq-item"]:checked + label span{
+    transform: rotate(45deg);
+}
+
+.faq .faq-contents{
+    /* display: none; 애니메이션 처리 불가 */
+    height: 0;
+    margin: 10px 0;
+    padding: 0 20px;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+    /* border: 1px solid rgba(255, 255, 255, 0.36); */
+    border-radius: 20px;
+    background-color: #ffffff1e;
+    transition: .3s;
+}
+.faq input[name="faq-item"]:checked + label +.faq-contents{
+    height: auto;
+    padding: 20px;
+}
+
+.faq .faq-contents .contents-txt{}
+
+
 .wrapper .footer{}
 
 /* 배경 애니메이션 */

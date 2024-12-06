@@ -186,8 +186,37 @@ a{text-decoration: none;}
     border: 1px solid rgba(255, 255, 255, 0.591);    border-radius: 20px;
     line-height: 56px;
 }
+.contents .sliders{
+    /* margin: 30px; */
+    margin-top: 30px;
+}
+.contents .sliders h2{
+    color: white;
+}
+.contents .sliders .contents-slider{
+    border: 1px solid yellow;
+}
+.contents .sliders .contents-slider .item{
+    width: 80%;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+}
 
-.wrapper .footer{}
+.contents .sliders .contents-slider .item img{
+    width: 100%;
+    transition: .3s ease;
+}
+
+.contents .sliders .contents-slider .item {
+    width: 100%;
+}
+.contents .sliders .contents-slider .item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.67);
+}
+
+
 
 /* 배경 애니메이션 */
 @keyframes moveBackground {
@@ -203,3 +232,75 @@ a{text-decoration: none;}
         background-position: left center;
     }
 }
+.prevBtn{
+    position: absolute;
+    top: 50%;
+    left:-60px;
+}
+.nextBtn{
+    position: absolute;
+    top: 50%;
+    right:-30px;
+}
+.prevBtn, .nextBtn{
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.613);
+    border: none;
+    border: 1px solid yellow;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.prevBtn i{
+    background-color: #ffffff8c;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 7px;
+    color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.547);
+    cursor: pointer;
+}
+
+.nextBtn i{
+    color: white;
+    font-size: 80px;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.627);
+    cursor: pointer;
+}
+
+.faq{margin: 30px;}
+.faq h2{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.faq input[name="faq-item"]:checked + label + .faq-contents{
+    height: auto;
+}
+
+.faq label{transition: .3s;}
+.faq label:hover{background-color: #ffffff4f;}
+.faq label span{float: right;
+    transition: .3s;}
+    
+.faq input[name="faq-item"]:checked + label + .faq-contents{
+        height: auto;
+    }
+.faq .faq-contents{
+    /* display: none; */
+    height: 0;margin: 10px 0;
+    padding: 0 20px;
+    overflow: hidden;
+    color: white;
+    font-style: 18px;
+    border: 1px solid rgb(255, 255, 255 0.36);
+    border-radius: 20px;
+    background-color: #ffffffle;
+    transition: .3s;
+}
+
+.faq .faq-contents{}
+
+
+
+.wrapper .footer{}
