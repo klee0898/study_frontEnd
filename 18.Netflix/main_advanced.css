@@ -1,0 +1,495 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("imgs/bg.jpg");
+    backdrop-filter: blur(30px);
+    background-repeat: no-repeat;
+    background-color: rgb(26, 25, 25);
+}
+
+a{
+    text-decoration: none;
+}
+.wrapper{
+    /* height: 100vh; */
+    height: 100%;    
+    background: linear-gradient(to top, rgb(39, 38, 38) 30%, rgba(0, 0, 0, 0.126));
+}
+.wrapper header{
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper header .logo{}
+.wrapper header .logo img{width: 200px;}
+.wrapper header .login-area{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.wrapper header .login-area #lang{
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #0f0f0f;
+    color: #fff;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.519);
+    outline: none;
+}
+.wrapper header .login-area #lang option{
+    background-color: #fff;
+    color: #000;
+}
+.wrapper header .login-area .login{
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;    
+}
+
+/* -------- hero ------- */
+.wrapper .hero{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    background-image: url('imgsNetflix/bg.jpg');    
+    height: 60vh;
+    /* 최소높이 설정 : */
+    min-height: 400px;
+    animation: moveBackground 60s linear infinite;    
+}
+/* ::before의 부모는 .hero */
+.wrapper .hero::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    border-radius: inherit;
+    /* 테두리 두께역할 */
+    padding: 2px; 
+    background: linear-gradient(to right bottom, rgb(37, 37, 37), rgba(131, 131, 131, 0.584) 25%);
+
+    /* 마스크 */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0); 
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude; 
+    -webkit-mask-composite: destination-out;   
+
+}
+
+.wrapper .hero .inner{
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #9d22068f, rgba(0, 0, 0, 0.682) 20%, rgba(0, 0, 255, 0)) ;
+}
+.wrapper .hero .inner .heading{
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    color: white;
+    font-size: 60px;
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+.wrapper .hero .inner .heading span{
+    display: block;
+    user-select: none;
+}
+.wrapper .hero .inner p{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    user-select: none;
+}
+.wrapper .hero .curve{
+    position: absolute;
+    bottom:-12px;
+    /* border: 1px solid yellow; */
+}
+
+.wrapper .hero .controls{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.wrapper .hero .controls .play-btn{
+    border-radius: 50%;
+    background-color: #000;
+    border: none;
+    padding: 5px;
+    transition: .3s;
+}
+.wrapper .hero .controls .play-btn:hover{
+    background-color: #7f7d7d;
+}
+
+.wrapper .hero .controls i{    
+    /* border: 1px solid yellow; */
+    font-size: 30px;
+    color: white;
+}
+
+/* ------------ contents ----------- */
+.wrapper .contents{margin: 50px auto; 
+    width: 90%; 
+}
+.wrapper .contents .search-area{    
+    text-align: center;    
+}
+.wrapper .contents .search-area p{    
+    color: rgba(255, 255, 255, 0.507);
+}
+.wrapper .contents .search-area .search{
+    margin: 20px;
+    /* border: 1px solid yellow; */
+    /* 내용물의 사이즈만클 줄어든다. */
+    display: inline-block;
+    position: relative;
+}
+.wrapper .contents .search-area .search span{
+    color: white;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    /* border: 1px solid white; */
+    /* 이벤트를 받지 않도록 */
+    pointer-events: none;
+}
+.wrapper .contents .search-area .search input:focus + span{ 
+    transform: translateY(-24px);
+    font-size: 10px;
+}
+
+.wrapper .contents .search-area .search input{  
+    color: white; font-size: 16px;
+    padding: 20px 20px;  background-color: #000;   outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.547);
+    border-radius: 30px;  width: 380px;  vertical-align: top;
+}
+.wrapper .contents .search-area .search button{
+    padding: 15px 20px;   background-color: red;   color: white;
+    font-size: 20px;   border-radius: 30px;   border: none;    width: 200px;
+    margin-left: 10px;    transition: .3s;
+}  
+.wrapper .contents .search-area .search button:hover{
+    background-color: rgb(168, 3, 3);
+}  
+.wrapper .contents .search-area .search button i{
+    margin-left: 20px;    
+}
+.wrapper .contents .detail-info{
+    margin-top: 40px;   display: flex; padding: 30px 50px;   border-radius: 20px;
+    background-color: #ffffff46;   border: 1px solid rgba(255, 255, 255, 0.459);
+    transition: .3s ease;
+}
+.wrapper .contents .detail-info:hover{
+    /* 자신 사이즈의 3%정도 키우기 */
+    transform: scale(1.03); 
+    background-color: #ffffff6f;
+}
+
+.wrapper .contents .detail-info .txt{flex: 1;}
+.wrapper .contents .detail-info .txt h3{ color: white; }
+.wrapper .contents .detail-info .txt p{  margin-top: 10px;    color: white;}
+.wrapper .contents .detail-info .detail-btn{
+    flex:1;  text-align: right; }
+
+.wrapper .contents .detail-info .detail-btn a{
+    padding: 5px 12px;   background-color: black;   color: white;
+    border: 1px solid rgba(255, 255, 255, 0.591);    border-radius: 20px;
+    line-height: 56px;
+}
+
+/* --------- slider area --------------- */
+.contents .sliders{
+    margin-top: 30px;
+}
+.contents .sliders h2{
+    color: white;
+    font-size: 30px;
+}
+.contents .sliders .contents-slider{
+    border: 1px solid rgb(245, 245, 241);
+    transition: .3s;
+}
+
+.contents .sliders .contents-slider .item{
+    /* border: 1px solid yellow;     */
+    border-radius: 20px;
+    margin: 10px;
+    /* overflow: hidden; */
+    position: relative;
+
+    width: 100%;
+    transition: .3s ease; 
+}
+
+.contents .sliders .contents-slider .item img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.contents .sliders .contents-slider .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.67);
+}
+
+/* 슬라이더 번호 적용하기 */
+.slide-number {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: black;
+    font-size: 100px;
+    /* padding: 5px 10px; */
+    /* border-radius: 5px; */    
+    text-shadow: 
+        3px 3px 0 rgb(250, 250, 250),
+        -3px 3px 0 rgb(245, 240, 241),
+        3px -3px 0 rgb(248, 247, 247),
+        -3px -3px 0 rgb(240, 240, 240);
+    z-index: 10;
+}
+
+
+.prevBtn{    
+    position: absolute;
+    top: 50%;
+    left:-30px;
+}
+
+.nextBtn{
+    position: absolute;
+    top: 50%;
+    right:-30px;
+}
+
+.prevBtn, .nextBtn{
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.395);
+    border: none;
+    /* border: 1px solid yellow; */
+    height: 70px;
+    border-radius: 10px;
+    transition: .3s ease;
+}  
+
+.prevBtn:hover, .nextBtn:hover{
+    background: rgba(255, 255, 255, 0.26);
+}    
+
+.prevBtn i, .nextBtn i{        
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+/* -------- 버튼 사라지는 애니메이션 --------*/
+.hidden{
+    opacity: 0;
+}
+
+.prevBtn.hidden{
+    transform: translate(-50px, -50%);
+}
+.nextBtn.hidden{
+    transform: translate(50px, -50%);
+}
+
+
+/* -------- 가입해야 하는 이유 ----- */
+.joinarea{
+    margin-top: 30px;
+}
+.joinarea h2{
+    color:white;
+    font-size: 30px;
+}
+
+/* -------- 자주 묻는 질문 -------- */
+.faq{ margin-top: 30px;}
+.faq h2{
+    font-size: 30px;
+    color:white;
+    margin-bottom: 20px;
+}
+.faq input[name="faq-item"]{
+    display: none;
+}
+
+.faq label{
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 20px;
+    background-color: #ffffff1e;
+    transition: .3s;
+
+}
+.faq label:hover{
+    background-color: #ffffff4f;
+}
+
+.faq label span{
+    float: right;
+    transition: .3s;
+}
+.faq input[name="faq-item"]:checked + label span{
+    transform: rotate(45deg);
+}
+
+.faq .faq-contents{
+    /* display: none; 애니메이션 처리 불가 */
+    height: 0;
+    margin: 10px 0;
+    padding: 0 20px;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+    /* border: 1px solid rgba(255, 255, 255, 0.36); */
+    border-radius: 20px;
+    background-color: #ffffff1e;
+    transition: .3s;
+}
+.faq input[name="faq-item"]:checked + label +.faq-contents{
+    height: auto;
+    padding: 20px;
+}
+
+.faq .faq-contents .contents-txt{}
+
+
+.wrapper .footer{}
+
+/* 배경 애니메이션 */
+@keyframes moveBackground {
+    0%{        
+        /* 가로:left, center, right, 세로: top center bottom */
+        /*                   가로  세로 */
+        background-position: left center;
+    }
+    50%{
+        background-position: right center;
+    }
+    100%{
+        background-position: left center;
+    }
+}
+
+.newsletter {
+    padding: 20px 10%;
+  }
+
+/* ------ 푸터 영역 ------ */
+footer {
+    padding: 60px 10%;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+  }
+  .footer-content a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .left {
+    flex-basis: 60%;
+  }
+  .center,
+  .right {
+    flex-basis: 20%;  
+    vertical-align: top;
+  }
+  .col h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .col h3 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  .footer-nav li:not(:last-child) {
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+  }
+  .footer-info {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .socials {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+  }
+  .socials a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  }
+  .copyright {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  } 
+  .footer-content p {
+    font-size: 14px;
+    line-height: 0.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  /* ---- 반응형 (푸터) ---- */
+  @media only screen and (max-width: 768px) {
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .col {
+      flex-basis: 100%;
+    }
+    .col h2 {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .col h3 {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  

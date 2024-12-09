@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넷플릭스</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <!-- Slick.js -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+   
+    <!-- Xeicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="main_advanced.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="imgs/Netflix_Logo_PMS.png" alt="">
+            </div>
+            <div class="login-area">
+                <select name="lang" id="lang">
+                    <option value="korean">한국어</option>
+                    <option value="korean">영어</option>
+                </select>
+                <a href="#none" class="login">로그인</a>
+            </div>
+        </header>
+        <!-- ---------------hero area------------------ -->
+        <section class="hero">
+            <div class="inner">
+                <h1 class="heading"><span>영화, 시리즈등을</span><span>무제한으로</span></h1>
+                <p>5,500원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
+            </div>
+            <svg class="curve" xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="none" viewBox="0 0 1680 40"><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#000"></path></svg>
+            <div class="controls">
+                <button class="play-btn">
+                    <i class="xi-play"></i>
+                </button>
+            </div>
+        </section>
+        <!-- ---------------contents area------------------ -->
+        <section class="contents">
+            <div class="search-area">
+                <p>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+                <div class="search">
+                    <input type="text"><span>이메일주소</span>
+                    <button>시작하기 <i class='xi-angle-right'></i></button>
+                </div>
+            </div>
+            <div class="detail-info">
+                <div class="txt">
+                    <h3>5,500원이면 만날 수 있는 넷플릭스</h3>
+                    <p>몇 개의 중간 광고와 함께 요금도 절약하고 넷플릭스도 즐겨보세요.</p>
+                </div>
+                <div class="detail-btn">
+                    <a href="#">자세히 알아보기</a>
+                </div>                
+            </div>
+            <div class="sliders">
+                <h2>지금 뜨는 콘텐츠</h2>
+                <div class="contents-slider">
+                    <div class="item"><img src="imgs/1.webp" alt=""></div>
+                    <div class="item"><img src="imgs/2.webp" alt=""></div>
+                    <div class="item"><img src="imgs/3.webp" alt=""></div>
+                    <div class="item"><img src="imgs/4.webp" alt=""></div>
+                    <div class="item"><img src="imgs/5.webp" alt=""></div>
+                    <div class="item"><img src="imgs/6.webp" alt=""></div>
+                    <div class="item"><img src="imgs/7.webp" alt=""></div>
+                    <div class="item"><img src="imgs/8.webp" alt=""></div>
+                    <div class="item"><img src="imgs/9.webp" alt=""></div>
+                    <div class="item"><img src="imgs/10.webp" alt=""></div>
+                </div> 
+                <br><br>
+                <h2>오직 넷플리스에서</h2>
+                <div class="contents-slider">
+                    <div class="item"><img src="imgs/11.webp" alt=""></div>
+                    <div class="item"><img src="imgs/12.webp" alt=""></div>
+                    <div class="item"><img src="imgs/13.webp" alt=""></div>
+                    <div class="item"><img src="imgs/14.webp" alt=""></div>
+                    <div class="item"><img src="imgs/15.webp" alt=""></div>
+                    <div class="item"><img src="imgs/16.webp" alt=""></div>
+                    <div class="item"><img src="imgs/17.webp" alt=""></div>
+                    <div class="item"><img src="imgs/18.webp" alt=""></div>
+                    <div class="item"><img src="imgs/19.webp" alt=""></div>
+                    <div class="item"><img src="imgs/20.webp" alt=""></div>
+                </div> 
+            </div>
+            <div class="joinarea">
+                <h2>가입해야 하는 또 다른 이유</h2>
+                <div class="join1"></div>
+                <div class="join2"></div>
+                <div class="join3"></div>
+                <div class="join4"></div>
+            </div>
+
+            <!-- ------------- FAQ ------------- -->
+            <div class="faq">
+                <h2>자주 묻는 질문</h2>
+                <input type="checkbox" name="faq-item" id="faq1">
+                <label for="faq1">넷플릭에서 어떤 콘텐츠를 시청할 수 있나요?<span><i class="xi-plus-thin"></i></span></label>
+                <div class="faq-contents">
+                    <p class="contents-txt">
+                        넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
+                    </p>
+                </div>
+
+                <input type="checkbox" name="faq-item" id="faq2">
+                <label for="faq2">넷플릭스란 무엇인가요?<span><i class="xi-plus-thin"></i></span></label>
+                <div class="faq-contents">
+                    <p class="contents-txt">
+                        넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
+                    </p>                    
+                </div>
+
+                <input type="checkbox" name="faq-item" id="faq3">
+                <label for="faq3">넷플릭스 요금은 얼마인가요?<span><i class="xi-plus-thin"></i></span></label>
+                <div class="faq-contents">
+                    <p class="contents-txt">
+                        넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
+                    </p>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- ---------------footer area------------------ -->
+        <footer></footer>
+    </div>
+    <script src="js/control.js"></script>
+    <script src="js/netflix_advanced.js"></script>
+</body>
+</html>
