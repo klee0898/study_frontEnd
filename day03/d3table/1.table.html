@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        td, th {border: 1px solid black;}
-       /* 셀과 셀사이의 여백을 없애기 */
-       table td, th{border-collapse: collapse;}
+        td, th {border: 1px solid #000;
+            table td, th{border-collapse: collapse;}
+        }
     </style>
 </head>
 <body>
+    <br>
+    Product
+    <br>
     <table border="1">
         <tr>
-            <th>번호</th>
-            <th>제품명</th>
-            <th>수량</th>
-            <th>가격</th>
+            <th>no</th>
+            <th>ITEM</th>
+            <th>ea</th>
+            <th>Price</th>
+        </tr>
+        <td>1</td>
+        <td>eyePatch</td>
+        <td>300</td>
+        <td rowspan="2">50000</td>
         </tr>
         <tr>
-            <td>1번</td>
-            <td>아이패치</td>
-            <td>100</td>
-            <td rowspan="2">50000</td>
-        </tr>
-        <tr>
-            <td>2번</td>
-            <td>장미수</td>
-            <!-- <td>100</td> -->
+            <td>2</td>
+            <td>rosewater</td>
             <td>100</td>
         </tr>
         <tr>
-            <td>3번</td>
-            <td>핸드크림</td>
+            <td>3</td>
+            <td>handcream</td>
             <td>100</td>
-            <td>50000</td>
+            <td>100000</td>
         </tr>
+
     </table>
+   
+    
 </body>
 </html>
